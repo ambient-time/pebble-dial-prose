@@ -11,8 +11,8 @@ output=ROOT/'build/host';output.mkdir(parents=True,exist_ok=True);exe=output/'re
 subprocess.run(['cc','-std=c11','-g','-DPROSE_HOST','-fsanitize=address,undefined','-Wall','-Wextra','-Werror',str(ROOT/'test/host.c'),str(ROOT/'src/c/prose.c'),'-o',str(exe)],check=True)
 actual=[line.split('|') for line in subprocess.check_output([str(exe),'phrases'],text=True).splitlines()]
 oracle=json.loads(subprocess.check_output(['node',str(ROOT/'test/source.mjs')],text=True))
-assert actual==[[p['time'],p['sentence']] for p in oracle['phrases']], 'C phrase/exact time differs from the pinned source'
-# Exact-time output advances every minute; prose changes only at five-minute boundaries.
+assert actual==[[p['time'],p['sentence']] for p in oracle['phrases']], 'C phrase differs from the pinned source'
+# Fixture labels cover every minute; prose changes only at five-minute boundaries.
 for i,(time,sentence) in enumerate(actual):
  assert time==f'{i//60:02d}:{i%60:02d}'
  if i%5:assert sentence==actual[i-1][1],(i,'premature phrase change')
@@ -27,4 +27,4 @@ poses=[(10,8,'hero'),(3,15,'quarter'),(7,25,'twentyfive'),(10,35,'eleven-till'),
 for width,height,mono in [(144,168,0),(144,168,1),(180,180,0),(200,228,0),(260,260,0)]:
  for h,m,name in poses:
   path=output/f'{width}-{mono}-{name}.pgm';subprocess.run([str(exe),str(width),str(height),str(h),str(m),str(mono),str(path)],check=True);Image.open(path).save(path.with_suffix('.png'))
-print('Dial Prose: all 1440 source phrases and exact times, all rollovers, and 7200 bounded sanitized renders passed')
+print('Dial Prose: all 1440 source phrases, all rollovers, and 7200 bounded sanitized renders passed')

@@ -1,11 +1,11 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "uuid": "b824aad2-f29d-4081-a6f6-60a19f00262d",
-  "pbwSHA256": "9e592cf0b78f185dcb580a029106c9e802d13655aeaad5ba0a6ccb41e979a3aa",
-  "sourceZipSHA256": "0f645ecf511cb94f133a77dabf8f6c9fe1d7a50460413ca6354bd4df425c77e0",
+  "pbwSHA256": "743f174e5e6cf4ce7c683431e412997f11d40386c34d53fa3acfd440537b4394",
+  "sourceZipSHA256": "c66db5aefa71e7702f621cb2774296d7de5bf34776ab46d01fca84a3be28eceb",
   "platforms": {
     "basalt": {
-      "capturedAt": "2026-09-07T03:57:11.714124+00:00",
+      "capturedAt": "2026-09-07T05:39:29.462428+00:00",
       "dimensions": [
         144,
         168
@@ -21,10 +21,10 @@
         "max": 4
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 54924
+      "minimumLoggedFreeHeapBytes": 55684
     },
     "diorite": {
-      "capturedAt": "2026-09-07T03:58:46.765089+00:00",
+      "capturedAt": "2026-09-07T05:41:04.884808+00:00",
       "dimensions": [
         144,
         168
@@ -40,10 +40,10 @@
         "max": 4
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 54940
+      "minimumLoggedFreeHeapBytes": 55700
     },
     "emery": {
-      "capturedAt": "2026-09-07T03:59:32.396587+00:00",
+      "capturedAt": "2026-09-07T05:41:50.750405+00:00",
       "dimensions": [
         200,
         228
@@ -56,13 +56,13 @@
       "nativeFrameCount": 16,
       "loggedRenderMS": {
         "min": 0,
-        "max": 4
+        "max": 1
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 117284
+      "minimumLoggedFreeHeapBytes": 118212
     },
     "flint": {
-      "capturedAt": "2026-09-07T04:00:18.928400+00:00",
+      "capturedAt": "2026-09-07T05:42:35.610575+00:00",
       "dimensions": [
         144,
         168
@@ -75,13 +75,13 @@
       "nativeFrameCount": 16,
       "loggedRenderMS": {
         "min": 0,
-        "max": 1
+        "max": 7
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 54940
+      "minimumLoggedFreeHeapBytes": 55700
     },
     "chalk": {
-      "capturedAt": "2026-09-07T03:57:59.293991+00:00",
+      "capturedAt": "2026-09-07T05:40:17.187661+00:00",
       "dimensions": [
         180,
         180
@@ -97,10 +97,10 @@
         "max": 4
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 54484
+      "minimumLoggedFreeHeapBytes": 55244
     },
     "gabbro": {
-      "capturedAt": "2026-09-07T03:55:54.028636+00:00",
+      "capturedAt": "2026-09-07T05:43:21.498808+00:00",
       "dimensions": [
         260,
         260
@@ -113,10 +113,10 @@
       "nativeFrameCount": 16,
       "loggedRenderMS": {
         "min": 0,
-        "max": 2
+        "max": 3
       },
       "renderMeasurementClock": "Watch wall time; fixture clock changes can affect these samples.",
-      "minimumLoggedFreeHeapBytes": 115612
+      "minimumLoggedFreeHeapBytes": 116564
     }
   },
   "limits": "Local emulator-tested review candidate. Native PNGs require visual inspection. Physical-watch power/readability, CloudPebble import and store publication remain unverified."

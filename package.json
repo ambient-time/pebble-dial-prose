@@ -1,14 +1,14 @@
 {
   "name": "dial-prose",
   "author": "Luke Steuber",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "keywords": [
     "pebble-app"
   ],
   "dependencies": {},
   "pebble": {
-    "displayName": "Dial Prose",
+    "displayName": "Prose",
     "companyName": "Luke Steuber",
     "uuid": "b824aad2-f29d-4081-a6f6-60a19f00262d",
     "sdkVersion": "3",

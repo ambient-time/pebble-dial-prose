@@ -2,7 +2,7 @@
 #pragma once
 #include <stdbool.h>
 #include <stdint.h>
-typedef struct { uint8_t ids[4], count; char exact[6]; } ProsePhrase;
+typedef struct { uint8_t ids[4], count; } ProsePhrase;
 typedef void (*ProsePixel)(int x, int y, uint8_t gray, void *user);
 ProsePhrase prose_phrase(int hour, int minute);
 const char *prose_run_text(int id);

@@ -1,7 +1,6 @@
 // Copyright 2026 Luke Steuber. MIT License.
 #include "prose.h"
 #include <stddef.h>
-#include <stdio.h>
 #ifndef PROSE_HOST
 #include <pebble.h>
 #endif
@@ -10,7 +9,7 @@ static const char *const RUNS[]={"it is","five","ten","a quarter","twenty","twen
 const char *prose_run_text(int id){return id>=0&&id<22?RUNS[id]:"";}
 ProsePhrase prose_phrase(int hour,int minute){
   hour=((hour%24)+24)%24;minute=((minute%60)+60)%60;
-  ProsePhrase p={{0,0,0,0},0,{0}};snprintf(p.exact,sizeof(p.exact),"%02d:%02d",hour,minute);
+  ProsePhrase p={{0,0,0,0},0};
   int bucket=minute/5,shown=(hour+(bucket>6))%12;int hour_id=10+(shown+11)%12;
   p.ids[p.count++]=0;
   if(!bucket){p.ids[p.count++]=hour_id;p.ids[p.count++]=9;}
@@ -47,7 +46,4 @@ void prose_render(int width,int height,int hour,int minute,bool monochrome,Prose
   const ProseLayout*l=prose_layout(width,height);if(!l)return;
   ProsePhrase p=prose_phrase(hour,minute);
   for(int i=0;i<p.count;i++){int id=p.ids[i];const ProseSprite*s=l->sprites+id;uint8_t ink=(id==0||(id>=7&&id<=9))?170:255;sprite(l,id,(width-s->w)/2,top_for(l,id,p.count==3),ink,monochrome,pixel,user);}
-  int total=l->footer_step*5,x=(width-total)/2;
-  for(int i=0;i<5;i++){int id=p.exact[i]==':'?32:22+p.exact[i]-'0';const ProseSprite*s=l->sprites+id;sprite(l,id,x+i*l->footer_step+(l->footer_step-s->w)/2,l->footer_top,170,monochrome,pixel,user);}
-  for(int k=0;k<l->rule_length;k++){pixel(width/2-total/2-8-k,l->footer_top+l->footer_height/2,monochrome?255:85,user);pixel(width/2+total/2+7+k,l->footer_top+l->footer_height/2,monochrome?255:85,user);}
 }

@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/google/fonts",
+  "commit": "3dd78844021e948ceb633d1dcee3f7885561b5d9",
+  "weight": 600,
+  "files": [
+    {
+      "file": "CormorantGaramond[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+    },
+    {
+      "file": "CormorantGaramond-Italic[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/cormorantgaramond/CormorantGaramond-Italic%5Bwght%5D.ttf",
+      "sha256": "0f48ea6abb2084537854f7174c470991a463b13036309e3b50a81511611c530d"
+    },
+    {
+      "file": "OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/cormorantgaramond/OFL.txt",
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+      "file": "JetBrainsMono[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf",
+      "sha256": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda"
+    },
+    {
+      "file": "JetBrainsMono-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/3dd78844021e948ceb633d1dcee3f7885561b5d9/ofl/jetbrainsmono/OFL.txt",
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
+    }
+  ],
+  "footerWeight": 500
+}

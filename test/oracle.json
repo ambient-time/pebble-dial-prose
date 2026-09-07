@@ -1,0 +1,6573 @@
+{
+  "sourceSHA256": "663fe9590e6780df70a8938528a6a5fbd0175585d3e541de832b7596b6272166",
+  "phrases": [
+    {
+      "time": "00:00",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "00:01",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "00:02",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "00:03",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "00:04",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "00:05",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "00:06",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "00:07",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "00:08",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "00:09",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "00:10",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "00:11",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "00:12",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "00:13",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "00:14",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "00:15",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "00:16",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "00:17",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "00:18",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "00:19",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "00:20",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "00:21",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "00:22",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "00:23",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "00:24",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "00:25",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "00:26",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "00:27",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "00:28",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "00:29",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "00:30",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "00:31",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "00:32",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "00:33",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "00:34",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "00:35",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "00:36",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "00:37",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "00:38",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "00:39",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "00:40",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "00:41",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "00:42",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "00:43",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "00:44",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "00:45",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "00:46",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "00:47",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "00:48",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "00:49",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "00:50",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "00:51",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "00:52",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "00:53",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "00:54",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "00:55",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "00:56",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "00:57",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "00:58",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "00:59",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "01:00",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "01:01",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "01:02",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "01:03",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "01:04",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "01:05",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "01:06",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "01:07",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "01:08",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "01:09",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "01:10",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "01:11",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "01:12",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "01:13",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "01:14",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "01:15",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "01:16",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "01:17",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "01:18",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "01:19",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "01:20",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "01:21",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "01:22",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "01:23",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "01:24",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "01:25",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "01:26",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "01:27",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "01:28",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "01:29",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "01:30",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "01:31",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "01:32",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "01:33",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "01:34",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "01:35",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "01:36",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "01:37",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "01:38",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "01:39",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "01:40",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "01:41",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "01:42",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "01:43",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "01:44",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "01:45",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "01:46",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "01:47",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "01:48",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "01:49",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "01:50",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "01:51",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "01:52",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "01:53",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "01:54",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "01:55",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "01:56",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "01:57",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "01:58",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "01:59",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "02:00",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "02:01",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "02:02",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "02:03",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "02:04",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "02:05",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "02:06",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "02:07",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "02:08",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "02:09",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "02:10",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "02:11",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "02:12",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "02:13",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "02:14",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "02:15",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "02:16",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "02:17",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "02:18",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "02:19",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "02:20",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "02:21",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "02:22",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "02:23",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "02:24",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "02:25",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "02:26",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "02:27",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "02:28",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "02:29",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "02:30",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "02:31",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "02:32",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "02:33",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "02:34",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "02:35",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "02:36",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "02:37",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "02:38",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "02:39",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "02:40",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "02:41",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "02:42",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "02:43",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "02:44",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "02:45",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "02:46",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "02:47",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "02:48",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "02:49",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "02:50",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "02:51",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "02:52",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "02:53",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "02:54",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "02:55",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "02:56",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "02:57",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "02:58",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "02:59",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "03:00",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "03:01",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "03:02",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "03:03",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "03:04",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "03:05",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "03:06",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "03:07",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "03:08",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "03:09",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "03:10",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "03:11",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "03:12",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "03:13",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "03:14",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "03:15",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "03:16",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "03:17",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "03:18",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "03:19",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "03:20",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "03:21",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "03:22",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "03:23",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "03:24",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "03:25",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "03:26",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "03:27",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "03:28",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "03:29",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "03:30",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "03:31",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "03:32",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "03:33",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "03:34",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "03:35",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "03:36",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "03:37",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "03:38",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "03:39",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "03:40",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "03:41",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "03:42",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "03:43",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "03:44",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "03:45",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "03:46",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "03:47",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "03:48",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "03:49",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "03:50",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "03:51",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "03:52",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "03:53",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "03:54",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "03:55",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "03:56",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "03:57",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "03:58",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "03:59",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "04:00",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "04:01",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "04:02",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "04:03",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "04:04",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "04:05",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "04:06",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "04:07",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "04:08",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "04:09",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "04:10",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "04:11",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "04:12",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "04:13",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "04:14",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "04:15",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "04:16",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "04:17",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "04:18",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "04:19",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "04:20",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "04:21",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "04:22",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "04:23",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "04:24",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "04:25",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "04:26",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "04:27",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "04:28",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "04:29",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "04:30",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "04:31",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "04:32",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "04:33",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "04:34",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "04:35",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "04:36",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "04:37",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "04:38",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "04:39",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "04:40",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "04:41",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "04:42",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "04:43",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "04:44",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "04:45",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "04:46",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "04:47",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "04:48",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "04:49",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "04:50",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "04:51",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "04:52",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "04:53",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "04:54",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "04:55",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "04:56",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "04:57",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "04:58",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "04:59",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "05:00",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "05:01",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "05:02",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "05:03",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "05:04",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "05:05",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "05:06",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "05:07",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "05:08",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "05:09",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "05:10",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "05:11",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "05:12",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "05:13",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "05:14",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "05:15",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "05:16",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "05:17",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "05:18",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "05:19",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "05:20",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "05:21",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "05:22",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "05:23",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "05:24",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "05:25",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "05:26",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "05:27",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "05:28",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "05:29",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "05:30",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "05:31",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "05:32",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "05:33",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "05:34",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "05:35",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "05:36",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "05:37",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "05:38",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "05:39",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "05:40",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "05:41",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "05:42",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "05:43",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "05:44",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "05:45",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "05:46",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "05:47",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "05:48",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "05:49",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "05:50",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "05:51",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "05:52",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "05:53",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "05:54",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "05:55",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "05:56",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "05:57",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "05:58",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "05:59",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "06:00",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "06:01",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "06:02",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "06:03",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "06:04",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "06:05",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "06:06",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "06:07",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "06:08",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "06:09",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "06:10",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "06:11",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "06:12",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "06:13",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "06:14",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "06:15",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "06:16",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "06:17",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "06:18",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "06:19",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "06:20",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "06:21",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "06:22",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "06:23",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "06:24",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "06:25",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "06:26",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "06:27",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "06:28",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "06:29",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "06:30",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "06:31",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "06:32",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "06:33",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "06:34",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "06:35",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "06:36",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "06:37",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "06:38",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "06:39",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "06:40",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "06:41",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "06:42",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "06:43",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "06:44",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "06:45",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "06:46",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "06:47",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "06:48",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "06:49",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "06:50",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "06:51",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "06:52",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "06:53",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "06:54",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "06:55",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "06:56",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "06:57",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "06:58",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "06:59",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "07:00",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "07:01",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "07:02",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "07:03",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "07:04",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "07:05",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "07:06",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "07:07",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "07:08",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "07:09",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "07:10",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "07:11",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "07:12",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "07:13",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "07:14",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "07:15",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "07:16",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "07:17",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "07:18",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "07:19",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "07:20",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "07:21",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "07:22",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "07:23",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "07:24",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "07:25",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "07:26",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "07:27",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "07:28",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "07:29",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "07:30",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "07:31",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "07:32",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "07:33",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "07:34",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "07:35",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "07:36",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "07:37",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "07:38",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "07:39",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "07:40",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "07:41",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "07:42",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "07:43",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "07:44",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "07:45",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "07:46",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "07:47",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "07:48",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "07:49",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "07:50",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "07:51",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "07:52",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "07:53",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "07:54",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "07:55",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "07:56",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "07:57",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "07:58",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "07:59",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "08:00",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "08:01",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "08:02",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "08:03",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "08:04",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "08:05",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "08:06",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "08:07",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "08:08",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "08:09",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "08:10",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "08:11",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "08:12",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "08:13",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "08:14",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "08:15",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "08:16",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "08:17",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "08:18",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "08:19",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "08:20",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "08:21",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "08:22",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "08:23",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "08:24",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "08:25",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "08:26",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "08:27",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "08:28",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "08:29",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "08:30",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "08:31",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "08:32",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "08:33",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "08:34",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "08:35",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "08:36",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "08:37",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "08:38",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "08:39",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "08:40",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "08:41",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "08:42",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "08:43",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "08:44",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "08:45",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "08:46",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "08:47",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "08:48",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "08:49",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "08:50",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "08:51",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "08:52",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "08:53",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "08:54",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "08:55",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "08:56",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "08:57",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "08:58",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "08:59",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "09:00",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "09:01",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "09:02",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "09:03",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "09:04",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "09:05",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "09:06",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "09:07",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "09:08",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "09:09",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "09:10",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "09:11",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "09:12",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "09:13",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "09:14",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "09:15",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "09:16",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "09:17",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "09:18",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "09:19",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "09:20",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "09:21",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "09:22",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "09:23",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "09:24",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "09:25",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "09:26",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "09:27",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "09:28",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "09:29",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "09:30",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "09:31",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "09:32",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "09:33",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "09:34",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "09:35",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "09:36",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "09:37",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "09:38",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "09:39",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "09:40",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "09:41",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "09:42",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "09:43",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "09:44",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "09:45",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "09:46",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "09:47",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "09:48",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "09:49",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "09:50",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "09:51",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "09:52",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "09:53",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "09:54",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "09:55",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "09:56",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "09:57",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "09:58",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "09:59",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "10:00",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "10:01",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "10:02",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "10:03",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "10:04",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "10:05",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "10:06",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "10:07",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "10:08",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "10:09",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "10:10",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "10:11",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "10:12",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "10:13",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "10:14",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "10:15",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "10:16",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "10:17",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "10:18",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "10:19",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "10:20",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "10:21",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "10:22",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "10:23",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "10:24",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "10:25",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "10:26",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "10:27",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "10:28",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "10:29",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "10:30",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "10:31",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "10:32",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "10:33",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "10:34",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "10:35",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "10:36",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "10:37",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "10:38",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "10:39",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "10:40",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "10:41",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "10:42",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "10:43",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "10:44",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "10:45",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "10:46",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "10:47",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "10:48",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "10:49",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "10:50",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "10:51",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "10:52",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "10:53",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "10:54",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "10:55",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "10:56",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "10:57",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "10:58",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "10:59",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "11:00",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "11:01",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "11:02",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "11:03",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "11:04",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "11:05",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "11:06",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "11:07",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "11:08",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "11:09",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "11:10",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "11:11",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "11:12",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "11:13",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "11:14",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "11:15",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "11:16",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "11:17",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "11:18",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "11:19",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "11:20",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "11:21",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "11:22",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "11:23",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "11:24",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "11:25",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "11:26",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "11:27",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "11:28",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "11:29",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "11:30",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "11:31",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "11:32",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "11:33",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "11:34",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "11:35",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "11:36",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "11:37",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "11:38",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "11:39",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "11:40",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "11:41",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "11:42",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "11:43",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "11:44",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "11:45",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "11:46",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "11:47",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "11:48",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "11:49",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "11:50",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "11:51",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "11:52",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "11:53",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "11:54",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "11:55",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "11:56",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "11:57",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "11:58",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "11:59",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "12:00",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "12:01",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "12:02",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "12:03",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "12:04",
+      "sentence": "it is twelve o'clock"
+    },
+    {
+      "time": "12:05",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "12:06",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "12:07",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "12:08",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "12:09",
+      "sentence": "it is five past twelve"
+    },
+    {
+      "time": "12:10",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "12:11",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "12:12",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "12:13",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "12:14",
+      "sentence": "it is ten past twelve"
+    },
+    {
+      "time": "12:15",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "12:16",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "12:17",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "12:18",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "12:19",
+      "sentence": "it is a quarter past twelve"
+    },
+    {
+      "time": "12:20",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "12:21",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "12:22",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "12:23",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "12:24",
+      "sentence": "it is twenty past twelve"
+    },
+    {
+      "time": "12:25",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "12:26",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "12:27",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "12:28",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "12:29",
+      "sentence": "it is twenty five past twelve"
+    },
+    {
+      "time": "12:30",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "12:31",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "12:32",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "12:33",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "12:34",
+      "sentence": "it is half past twelve"
+    },
+    {
+      "time": "12:35",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "12:36",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "12:37",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "12:38",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "12:39",
+      "sentence": "it is twenty five till one"
+    },
+    {
+      "time": "12:40",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "12:41",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "12:42",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "12:43",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "12:44",
+      "sentence": "it is twenty till one"
+    },
+    {
+      "time": "12:45",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "12:46",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "12:47",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "12:48",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "12:49",
+      "sentence": "it is a quarter till one"
+    },
+    {
+      "time": "12:50",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "12:51",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "12:52",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "12:53",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "12:54",
+      "sentence": "it is ten till one"
+    },
+    {
+      "time": "12:55",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "12:56",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "12:57",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "12:58",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "12:59",
+      "sentence": "it is five till one"
+    },
+    {
+      "time": "13:00",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "13:01",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "13:02",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "13:03",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "13:04",
+      "sentence": "it is one o'clock"
+    },
+    {
+      "time": "13:05",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "13:06",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "13:07",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "13:08",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "13:09",
+      "sentence": "it is five past one"
+    },
+    {
+      "time": "13:10",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "13:11",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "13:12",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "13:13",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "13:14",
+      "sentence": "it is ten past one"
+    },
+    {
+      "time": "13:15",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "13:16",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "13:17",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "13:18",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "13:19",
+      "sentence": "it is a quarter past one"
+    },
+    {
+      "time": "13:20",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "13:21",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "13:22",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "13:23",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "13:24",
+      "sentence": "it is twenty past one"
+    },
+    {
+      "time": "13:25",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "13:26",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "13:27",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "13:28",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "13:29",
+      "sentence": "it is twenty five past one"
+    },
+    {
+      "time": "13:30",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "13:31",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "13:32",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "13:33",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "13:34",
+      "sentence": "it is half past one"
+    },
+    {
+      "time": "13:35",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "13:36",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "13:37",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "13:38",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "13:39",
+      "sentence": "it is twenty five till two"
+    },
+    {
+      "time": "13:40",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "13:41",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "13:42",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "13:43",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "13:44",
+      "sentence": "it is twenty till two"
+    },
+    {
+      "time": "13:45",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "13:46",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "13:47",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "13:48",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "13:49",
+      "sentence": "it is a quarter till two"
+    },
+    {
+      "time": "13:50",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "13:51",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "13:52",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "13:53",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "13:54",
+      "sentence": "it is ten till two"
+    },
+    {
+      "time": "13:55",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "13:56",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "13:57",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "13:58",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "13:59",
+      "sentence": "it is five till two"
+    },
+    {
+      "time": "14:00",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "14:01",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "14:02",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "14:03",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "14:04",
+      "sentence": "it is two o'clock"
+    },
+    {
+      "time": "14:05",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "14:06",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "14:07",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "14:08",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "14:09",
+      "sentence": "it is five past two"
+    },
+    {
+      "time": "14:10",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "14:11",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "14:12",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "14:13",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "14:14",
+      "sentence": "it is ten past two"
+    },
+    {
+      "time": "14:15",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "14:16",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "14:17",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "14:18",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "14:19",
+      "sentence": "it is a quarter past two"
+    },
+    {
+      "time": "14:20",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "14:21",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "14:22",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "14:23",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "14:24",
+      "sentence": "it is twenty past two"
+    },
+    {
+      "time": "14:25",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "14:26",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "14:27",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "14:28",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "14:29",
+      "sentence": "it is twenty five past two"
+    },
+    {
+      "time": "14:30",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "14:31",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "14:32",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "14:33",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "14:34",
+      "sentence": "it is half past two"
+    },
+    {
+      "time": "14:35",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "14:36",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "14:37",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "14:38",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "14:39",
+      "sentence": "it is twenty five till three"
+    },
+    {
+      "time": "14:40",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "14:41",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "14:42",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "14:43",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "14:44",
+      "sentence": "it is twenty till three"
+    },
+    {
+      "time": "14:45",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "14:46",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "14:47",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "14:48",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "14:49",
+      "sentence": "it is a quarter till three"
+    },
+    {
+      "time": "14:50",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "14:51",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "14:52",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "14:53",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "14:54",
+      "sentence": "it is ten till three"
+    },
+    {
+      "time": "14:55",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "14:56",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "14:57",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "14:58",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "14:59",
+      "sentence": "it is five till three"
+    },
+    {
+      "time": "15:00",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "15:01",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "15:02",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "15:03",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "15:04",
+      "sentence": "it is three o'clock"
+    },
+    {
+      "time": "15:05",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "15:06",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "15:07",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "15:08",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "15:09",
+      "sentence": "it is five past three"
+    },
+    {
+      "time": "15:10",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "15:11",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "15:12",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "15:13",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "15:14",
+      "sentence": "it is ten past three"
+    },
+    {
+      "time": "15:15",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "15:16",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "15:17",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "15:18",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "15:19",
+      "sentence": "it is a quarter past three"
+    },
+    {
+      "time": "15:20",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "15:21",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "15:22",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "15:23",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "15:24",
+      "sentence": "it is twenty past three"
+    },
+    {
+      "time": "15:25",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "15:26",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "15:27",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "15:28",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "15:29",
+      "sentence": "it is twenty five past three"
+    },
+    {
+      "time": "15:30",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "15:31",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "15:32",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "15:33",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "15:34",
+      "sentence": "it is half past three"
+    },
+    {
+      "time": "15:35",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "15:36",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "15:37",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "15:38",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "15:39",
+      "sentence": "it is twenty five till four"
+    },
+    {
+      "time": "15:40",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "15:41",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "15:42",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "15:43",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "15:44",
+      "sentence": "it is twenty till four"
+    },
+    {
+      "time": "15:45",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "15:46",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "15:47",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "15:48",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "15:49",
+      "sentence": "it is a quarter till four"
+    },
+    {
+      "time": "15:50",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "15:51",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "15:52",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "15:53",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "15:54",
+      "sentence": "it is ten till four"
+    },
+    {
+      "time": "15:55",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "15:56",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "15:57",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "15:58",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "15:59",
+      "sentence": "it is five till four"
+    },
+    {
+      "time": "16:00",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "16:01",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "16:02",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "16:03",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "16:04",
+      "sentence": "it is four o'clock"
+    },
+    {
+      "time": "16:05",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "16:06",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "16:07",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "16:08",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "16:09",
+      "sentence": "it is five past four"
+    },
+    {
+      "time": "16:10",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "16:11",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "16:12",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "16:13",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "16:14",
+      "sentence": "it is ten past four"
+    },
+    {
+      "time": "16:15",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "16:16",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "16:17",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "16:18",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "16:19",
+      "sentence": "it is a quarter past four"
+    },
+    {
+      "time": "16:20",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "16:21",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "16:22",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "16:23",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "16:24",
+      "sentence": "it is twenty past four"
+    },
+    {
+      "time": "16:25",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "16:26",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "16:27",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "16:28",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "16:29",
+      "sentence": "it is twenty five past four"
+    },
+    {
+      "time": "16:30",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "16:31",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "16:32",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "16:33",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "16:34",
+      "sentence": "it is half past four"
+    },
+    {
+      "time": "16:35",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "16:36",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "16:37",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "16:38",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "16:39",
+      "sentence": "it is twenty five till five"
+    },
+    {
+      "time": "16:40",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "16:41",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "16:42",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "16:43",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "16:44",
+      "sentence": "it is twenty till five"
+    },
+    {
+      "time": "16:45",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "16:46",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "16:47",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "16:48",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "16:49",
+      "sentence": "it is a quarter till five"
+    },
+    {
+      "time": "16:50",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "16:51",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "16:52",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "16:53",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "16:54",
+      "sentence": "it is ten till five"
+    },
+    {
+      "time": "16:55",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "16:56",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "16:57",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "16:58",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "16:59",
+      "sentence": "it is five till five"
+    },
+    {
+      "time": "17:00",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "17:01",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "17:02",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "17:03",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "17:04",
+      "sentence": "it is five o'clock"
+    },
+    {
+      "time": "17:05",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "17:06",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "17:07",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "17:08",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "17:09",
+      "sentence": "it is five past five"
+    },
+    {
+      "time": "17:10",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "17:11",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "17:12",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "17:13",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "17:14",
+      "sentence": "it is ten past five"
+    },
+    {
+      "time": "17:15",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "17:16",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "17:17",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "17:18",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "17:19",
+      "sentence": "it is a quarter past five"
+    },
+    {
+      "time": "17:20",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "17:21",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "17:22",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "17:23",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "17:24",
+      "sentence": "it is twenty past five"
+    },
+    {
+      "time": "17:25",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "17:26",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "17:27",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "17:28",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "17:29",
+      "sentence": "it is twenty five past five"
+    },
+    {
+      "time": "17:30",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "17:31",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "17:32",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "17:33",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "17:34",
+      "sentence": "it is half past five"
+    },
+    {
+      "time": "17:35",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "17:36",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "17:37",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "17:38",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "17:39",
+      "sentence": "it is twenty five till six"
+    },
+    {
+      "time": "17:40",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "17:41",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "17:42",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "17:43",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "17:44",
+      "sentence": "it is twenty till six"
+    },
+    {
+      "time": "17:45",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "17:46",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "17:47",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "17:48",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "17:49",
+      "sentence": "it is a quarter till six"
+    },
+    {
+      "time": "17:50",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "17:51",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "17:52",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "17:53",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "17:54",
+      "sentence": "it is ten till six"
+    },
+    {
+      "time": "17:55",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "17:56",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "17:57",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "17:58",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "17:59",
+      "sentence": "it is five till six"
+    },
+    {
+      "time": "18:00",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "18:01",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "18:02",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "18:03",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "18:04",
+      "sentence": "it is six o'clock"
+    },
+    {
+      "time": "18:05",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "18:06",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "18:07",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "18:08",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "18:09",
+      "sentence": "it is five past six"
+    },
+    {
+      "time": "18:10",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "18:11",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "18:12",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "18:13",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "18:14",
+      "sentence": "it is ten past six"
+    },
+    {
+      "time": "18:15",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "18:16",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "18:17",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "18:18",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "18:19",
+      "sentence": "it is a quarter past six"
+    },
+    {
+      "time": "18:20",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "18:21",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "18:22",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "18:23",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "18:24",
+      "sentence": "it is twenty past six"
+    },
+    {
+      "time": "18:25",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "18:26",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "18:27",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "18:28",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "18:29",
+      "sentence": "it is twenty five past six"
+    },
+    {
+      "time": "18:30",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "18:31",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "18:32",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "18:33",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "18:34",
+      "sentence": "it is half past six"
+    },
+    {
+      "time": "18:35",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "18:36",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "18:37",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "18:38",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "18:39",
+      "sentence": "it is twenty five till seven"
+    },
+    {
+      "time": "18:40",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "18:41",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "18:42",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "18:43",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "18:44",
+      "sentence": "it is twenty till seven"
+    },
+    {
+      "time": "18:45",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "18:46",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "18:47",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "18:48",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "18:49",
+      "sentence": "it is a quarter till seven"
+    },
+    {
+      "time": "18:50",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "18:51",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "18:52",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "18:53",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "18:54",
+      "sentence": "it is ten till seven"
+    },
+    {
+      "time": "18:55",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "18:56",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "18:57",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "18:58",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "18:59",
+      "sentence": "it is five till seven"
+    },
+    {
+      "time": "19:00",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "19:01",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "19:02",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "19:03",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "19:04",
+      "sentence": "it is seven o'clock"
+    },
+    {
+      "time": "19:05",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "19:06",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "19:07",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "19:08",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "19:09",
+      "sentence": "it is five past seven"
+    },
+    {
+      "time": "19:10",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "19:11",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "19:12",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "19:13",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "19:14",
+      "sentence": "it is ten past seven"
+    },
+    {
+      "time": "19:15",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "19:16",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "19:17",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "19:18",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "19:19",
+      "sentence": "it is a quarter past seven"
+    },
+    {
+      "time": "19:20",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "19:21",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "19:22",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "19:23",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "19:24",
+      "sentence": "it is twenty past seven"
+    },
+    {
+      "time": "19:25",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "19:26",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "19:27",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "19:28",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "19:29",
+      "sentence": "it is twenty five past seven"
+    },
+    {
+      "time": "19:30",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "19:31",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "19:32",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "19:33",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "19:34",
+      "sentence": "it is half past seven"
+    },
+    {
+      "time": "19:35",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "19:36",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "19:37",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "19:38",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "19:39",
+      "sentence": "it is twenty five till eight"
+    },
+    {
+      "time": "19:40",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "19:41",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "19:42",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "19:43",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "19:44",
+      "sentence": "it is twenty till eight"
+    },
+    {
+      "time": "19:45",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "19:46",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "19:47",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "19:48",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "19:49",
+      "sentence": "it is a quarter till eight"
+    },
+    {
+      "time": "19:50",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "19:51",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "19:52",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "19:53",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "19:54",
+      "sentence": "it is ten till eight"
+    },
+    {
+      "time": "19:55",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "19:56",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "19:57",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "19:58",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "19:59",
+      "sentence": "it is five till eight"
+    },
+    {
+      "time": "20:00",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "20:01",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "20:02",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "20:03",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "20:04",
+      "sentence": "it is eight o'clock"
+    },
+    {
+      "time": "20:05",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "20:06",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "20:07",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "20:08",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "20:09",
+      "sentence": "it is five past eight"
+    },
+    {
+      "time": "20:10",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "20:11",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "20:12",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "20:13",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "20:14",
+      "sentence": "it is ten past eight"
+    },
+    {
+      "time": "20:15",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "20:16",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "20:17",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "20:18",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "20:19",
+      "sentence": "it is a quarter past eight"
+    },
+    {
+      "time": "20:20",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "20:21",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "20:22",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "20:23",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "20:24",
+      "sentence": "it is twenty past eight"
+    },
+    {
+      "time": "20:25",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "20:26",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "20:27",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "20:28",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "20:29",
+      "sentence": "it is twenty five past eight"
+    },
+    {
+      "time": "20:30",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "20:31",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "20:32",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "20:33",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "20:34",
+      "sentence": "it is half past eight"
+    },
+    {
+      "time": "20:35",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "20:36",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "20:37",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "20:38",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "20:39",
+      "sentence": "it is twenty five till nine"
+    },
+    {
+      "time": "20:40",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "20:41",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "20:42",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "20:43",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "20:44",
+      "sentence": "it is twenty till nine"
+    },
+    {
+      "time": "20:45",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "20:46",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "20:47",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "20:48",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "20:49",
+      "sentence": "it is a quarter till nine"
+    },
+    {
+      "time": "20:50",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "20:51",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "20:52",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "20:53",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "20:54",
+      "sentence": "it is ten till nine"
+    },
+    {
+      "time": "20:55",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "20:56",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "20:57",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "20:58",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "20:59",
+      "sentence": "it is five till nine"
+    },
+    {
+      "time": "21:00",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "21:01",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "21:02",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "21:03",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "21:04",
+      "sentence": "it is nine o'clock"
+    },
+    {
+      "time": "21:05",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "21:06",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "21:07",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "21:08",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "21:09",
+      "sentence": "it is five past nine"
+    },
+    {
+      "time": "21:10",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "21:11",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "21:12",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "21:13",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "21:14",
+      "sentence": "it is ten past nine"
+    },
+    {
+      "time": "21:15",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "21:16",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "21:17",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "21:18",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "21:19",
+      "sentence": "it is a quarter past nine"
+    },
+    {
+      "time": "21:20",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "21:21",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "21:22",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "21:23",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "21:24",
+      "sentence": "it is twenty past nine"
+    },
+    {
+      "time": "21:25",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "21:26",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "21:27",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "21:28",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "21:29",
+      "sentence": "it is twenty five past nine"
+    },
+    {
+      "time": "21:30",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "21:31",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "21:32",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "21:33",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "21:34",
+      "sentence": "it is half past nine"
+    },
+    {
+      "time": "21:35",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "21:36",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "21:37",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "21:38",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "21:39",
+      "sentence": "it is twenty five till ten"
+    },
+    {
+      "time": "21:40",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "21:41",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "21:42",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "21:43",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "21:44",
+      "sentence": "it is twenty till ten"
+    },
+    {
+      "time": "21:45",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "21:46",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "21:47",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "21:48",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "21:49",
+      "sentence": "it is a quarter till ten"
+    },
+    {
+      "time": "21:50",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "21:51",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "21:52",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "21:53",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "21:54",
+      "sentence": "it is ten till ten"
+    },
+    {
+      "time": "21:55",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "21:56",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "21:57",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "21:58",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "21:59",
+      "sentence": "it is five till ten"
+    },
+    {
+      "time": "22:00",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "22:01",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "22:02",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "22:03",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "22:04",
+      "sentence": "it is ten o'clock"
+    },
+    {
+      "time": "22:05",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "22:06",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "22:07",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "22:08",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "22:09",
+      "sentence": "it is five past ten"
+    },
+    {
+      "time": "22:10",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "22:11",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "22:12",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "22:13",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "22:14",
+      "sentence": "it is ten past ten"
+    },
+    {
+      "time": "22:15",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "22:16",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "22:17",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "22:18",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "22:19",
+      "sentence": "it is a quarter past ten"
+    },
+    {
+      "time": "22:20",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "22:21",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "22:22",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "22:23",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "22:24",
+      "sentence": "it is twenty past ten"
+    },
+    {
+      "time": "22:25",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "22:26",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "22:27",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "22:28",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "22:29",
+      "sentence": "it is twenty five past ten"
+    },
+    {
+      "time": "22:30",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "22:31",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "22:32",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "22:33",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "22:34",
+      "sentence": "it is half past ten"
+    },
+    {
+      "time": "22:35",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "22:36",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "22:37",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "22:38",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "22:39",
+      "sentence": "it is twenty five till eleven"
+    },
+    {
+      "time": "22:40",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "22:41",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "22:42",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "22:43",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "22:44",
+      "sentence": "it is twenty till eleven"
+    },
+    {
+      "time": "22:45",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "22:46",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "22:47",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "22:48",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "22:49",
+      "sentence": "it is a quarter till eleven"
+    },
+    {
+      "time": "22:50",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "22:51",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "22:52",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "22:53",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "22:54",
+      "sentence": "it is ten till eleven"
+    },
+    {
+      "time": "22:55",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "22:56",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "22:57",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "22:58",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "22:59",
+      "sentence": "it is five till eleven"
+    },
+    {
+      "time": "23:00",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "23:01",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "23:02",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "23:03",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "23:04",
+      "sentence": "it is eleven o'clock"
+    },
+    {
+      "time": "23:05",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "23:06",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "23:07",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "23:08",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "23:09",
+      "sentence": "it is five past eleven"
+    },
+    {
+      "time": "23:10",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "23:11",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "23:12",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "23:13",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "23:14",
+      "sentence": "it is ten past eleven"
+    },
+    {
+      "time": "23:15",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "23:16",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "23:17",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "23:18",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "23:19",
+      "sentence": "it is a quarter past eleven"
+    },
+    {
+      "time": "23:20",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "23:21",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "23:22",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "23:23",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "23:24",
+      "sentence": "it is twenty past eleven"
+    },
+    {
+      "time": "23:25",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "23:26",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "23:27",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "23:28",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "23:29",
+      "sentence": "it is twenty five past eleven"
+    },
+    {
+      "time": "23:30",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "23:31",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "23:32",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "23:33",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "23:34",
+      "sentence": "it is half past eleven"
+    },
+    {
+      "time": "23:35",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "23:36",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "23:37",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "23:38",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "23:39",
+      "sentence": "it is twenty five till twelve"
+    },
+    {
+      "time": "23:40",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "23:41",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "23:42",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "23:43",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "23:44",
+      "sentence": "it is twenty till twelve"
+    },
+    {
+      "time": "23:45",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "23:46",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "23:47",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "23:48",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "23:49",
+      "sentence": "it is a quarter till twelve"
+    },
+    {
+      "time": "23:50",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "23:51",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "23:52",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "23:53",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "23:54",
+      "sentence": "it is ten till twelve"
+    },
+    {
+      "time": "23:55",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "23:56",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "23:57",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "23:58",
+      "sentence": "it is five till twelve"
+    },
+    {
+      "time": "23:59",
+      "sentence": "it is five till twelve"
+    }
+  ],
+  "words": [
+    "it is",
+    "five",
+    "ten",
+    "a quarter",
+    "twenty",
+    "twenty five",
+    "half",
+    "past",
+    "till",
+    "o'clock",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "eleven",
+    "twelve"
+  ],
+  "layouts": [
+    {
+      "width": 144,
+      "height": 168,
+      "sizes": [
+        18,
+        27,
+        38,
+        12
+      ],
+      "top": [
+        22,
+        47,
+        82,
+        106
+      ],
+      "exact_top": [
+        38,
+        65,
+        111
+      ],
+      "footer_top": 151,
+      "footer_step": 8,
+      "rule_length": 12,
+      "platforms": [
+        "BASALT",
+        "DIORITE",
+        "FLINT"
+      ],
+      "bytes": 7901,
+      "sprites": [
+        [
+          0,
+          23,
+          19
+        ],
+        [
+          107,
+          38,
+          29
+        ],
+        [
+          343,
+          35,
+          29
+        ],
+        [
+          526,
+          98,
+          29
+        ],
+        [
+          1039,
+          74,
+          29
+        ],
+        [
+          1457,
+          118,
+          29
+        ],
+        [
+          2108,
+          46,
+          29
+        ],
+        [
+          2423,
+          29,
+          19
+        ],
+        [
+          2575,
+          18,
+          19
+        ],
+        [
+          2700,
+          40,
+          19
+        ],
+        [
+          2925,
+          53,
+          38
+        ],
+        [
+          3219,
+          57,
+          38
+        ],
+        [
+          3535,
+          77,
+          38
+        ],
+        [
+          3974,
+          63,
+          38
+        ],
+        [
+          4352,
+          53,
+          38
+        ],
+        [
+          4677,
+          40,
+          38
+        ],
+        [
+          4910,
+          80,
+          38
+        ],
+        [
+          5339,
+          74,
+          38
+        ],
+        [
+          5843,
+          65,
+          38
+        ],
+        [
+          6200,
+          48,
+          38
+        ],
+        [
+          6457,
+          93,
+          38
+        ],
+        [
+          6973,
+          97,
+          38
+        ],
+        [
+          7510,
+          7,
+          9
+        ],
+        [
+          7562,
+          7,
+          9
+        ],
+        [
+          7593,
+          7,
+          9
+        ],
+        [
+          7630,
+          7,
+          9
+        ],
+        [
+          7664,
+          7,
+          9
+        ],
+        [
+          7696,
+          7,
+          9
+        ],
+        [
+          7735,
+          7,
+          9
+        ],
+        [
+          7776,
+          7,
+          9
+        ],
+        [
+          7805,
+          7,
+          9
+        ],
+        [
+          7851,
+          7,
+          9
+        ],
+        [
+          7888,
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "width": 180,
+      "height": 180,
+      "sizes": [
+        20,
+        31,
+        43,
+        12
+      ],
+      "top": [
+        23,
+        50,
+        89,
+        116
+      ],
+      "exact_top": [
+        42,
+        70,
+        125
+      ],
+      "footer_top": 159,
+      "footer_step": 8,
+      "rule_length": 13,
+      "platforms": [
+        "CHALK"
+      ],
+      "bytes": 8317,
+      "sprites": [
+        [
+          0,
+          27,
+          21
+        ],
+        [
+          137,
+          46,
+          31
+        ],
+        [
+          371,
+          40,
+          31
+        ],
+        [
+          549,
+          112,
+          31
+        ],
+        [
+          1054,
+          86,
+          31
+        ],
+        [
+          1469,
+          138,
+          31
+        ],
+        [
+          2119,
+          52,
+          31
+        ],
+        [
+          2406,
+          32,
+          21
+        ],
+        [
+          2596,
+          21,
+          21
+        ],
+        [
+          2758,
+          47,
+          21
+        ],
+        [
+          3066,
+          60,
+          44
+        ],
+        [
+          3388,
+          64,
+          44
+        ],
+        [
+          3737,
+          88,
+          44
+        ],
+        [
+          4183,
+          71,
+          44
+        ],
+        [
+          4597,
+          62,
+          44
+        ],
+        [
+          4941,
+          46,
+          44
+        ],
+        [
+          5206,
+          92,
+          44
+        ],
+        [
+          5677,
+          85,
+          44
+        ],
+        [
+          6197,
+          74,
+          44
+        ],
+        [
+          6570,
+          55,
+          44
+        ],
+        [
+          6832,
+          107,
+          44
+        ],
+        [
+          7366,
+          111,
+          44
+        ],
+        [
+          7926,
+          7,
+          9
+        ],
+        [
+          7978,
+          7,
+          9
+        ],
+        [
+          8009,
+          7,
+          9
+        ],
+        [
+          8046,
+          7,
+          9
+        ],
+        [
+          8080,
+          7,
+          9
+        ],
+        [
+          8112,
+          7,
+          9
+        ],
+        [
+          8151,
+          7,
+          9
+        ],
+        [
+          8192,
+          7,
+          9
+        ],
+        [
+          8221,
+          7,
+          9
+        ],
+        [
+          8267,
+          7,
+          9
+        ],
+        [
+          8304,
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "width": 200,
+      "height": 228,
+      "sizes": [
+        25,
+        38,
+        53,
+        16
+      ],
+      "top": [
+        32,
+        65,
+        115,
+        150
+      ],
+      "exact_top": [
+        55,
+        90,
+        158
+      ],
+      "footer_top": 204,
+      "footer_step": 10,
+      "rule_length": 17,
+      "platforms": [
+        "EMERY"
+      ],
+      "bytes": 11078,
+      "sprites": [
+        [
+          0,
+          33,
+          26
+        ],
+        [
+          191,
+          53,
+          38
+        ],
+        [
+          516,
+          48,
+          38
+        ],
+        [
+          773,
+          139,
+          38
+        ],
+        [
+          1503,
+          105,
+          38
+        ],
+        [
+          2090,
+          166,
+          38
+        ],
+        [
+          3006,
+          64,
+          38
+        ],
+        [
+          3448,
+          39,
+          26
+        ],
+        [
+          3698,
+          26,
+          26
+        ],
+        [
+          3920,
+          58,
+          26
+        ],
+        [
+          4335,
+          75,
+          54
+        ],
+        [
+          4737,
+          80,
+          54
+        ],
+        [
+          5196,
+          108,
+          54
+        ],
+        [
+          5750,
+          88,
+          54
+        ],
+        [
+          6264,
+          75,
+          54
+        ],
+        [
+          6711,
+          56,
+          54
+        ],
+        [
+          7050,
+          112,
+          54
+        ],
+        [
+          7659,
+          104,
+          54
+        ],
+        [
+          8308,
+          90,
+          54
+        ],
+        [
+          8766,
+          67,
+          54
+        ],
+        [
+          9093,
+          130,
+          54
+        ],
+        [
+          9772,
+          135,
+          54
+        ],
+        [
+          10519,
+          10,
+          12
+        ],
+        [
+          10585,
+          10,
+          12
+        ],
+        [
+          10629,
+          10,
+          12
+        ],
+        [
+          10677,
+          10,
+          12
+        ],
+        [
+          10722,
+          10,
+          12
+        ],
+        [
+          10770,
+          10,
+          12
+        ],
+        [
+          10824,
+          10,
+          12
+        ],
+        [
+          10884,
+          10,
+          12
+        ],
+        [
+          10933,
+          10,
+          12
+        ],
+        [
+          10998,
+          10,
+          12
+        ],
+        [
+          11055,
+          10,
+          12
+        ]
+      ]
+    },
+    {
+      "width": 260,
+      "height": 260,
+      "sizes": [
+        29,
+        44,
+        60,
+        18
+      ],
+      "top": [
+        38,
+        79,
+        131,
+        168
+      ],
+      "exact_top": [
+        67,
+        109,
+        190
+      ],
+      "footer_top": 233,
+      "footer_step": 12,
+      "rule_length": 20,
+      "platforms": [
+        "GABBRO"
+      ],
+      "bytes": 12702,
+      "sprites": [
+        [
+          0,
+          39,
+          32
+        ],
+        [
+          218,
+          63,
+          47
+        ],
+        [
+          588,
+          56,
+          47
+        ],
+        [
+          866,
+          157,
+          47
+        ],
+        [
+          1699,
+          121,
+          47
+        ],
+        [
+          2364,
+          193,
+          47
+        ],
+        [
+          3402,
+          73,
+          47
+        ],
+        [
+          3852,
+          46,
+          32
+        ],
+        [
+          4159,
+          31,
+          32
+        ],
+        [
+          4429,
+          68,
+          32
+        ],
+        [
+          4924,
+          86,
+          62
+        ],
+        [
+          5390,
+          90,
+          62
+        ],
+        [
+          5927,
+          124,
+          62
+        ],
+        [
+          6571,
+          101,
+          62
+        ],
+        [
+          7176,
+          86,
+          62
+        ],
+        [
+          7698,
+          63,
+          62
+        ],
+        [
+          8082,
+          128,
+          62
+        ],
+        [
+          8782,
+          119,
+          62
+        ],
+        [
+          9531,
+          105,
+          62
+        ],
+        [
+          10070,
+          77,
+          62
+        ],
+        [
+          10456,
+          149,
+          62
+        ],
+        [
+          11255,
+          153,
+          62
+        ],
+        [
+          12122,
+          11,
+          13
+        ],
+        [
+          12196,
+          11,
+          13
+        ],
+        [
+          12230,
+          11,
+          13
+        ],
+        [
+          12285,
+          11,
+          13
+        ],
+        [
+          12339,
+          11,
+          13
+        ],
+        [
+          12384,
+          11,
+          13
+        ],
+        [
+          12433,
+          11,
+          13
+        ],
+        [
+          12495,
+          11,
+          13
+        ],
+        [
+          12544,
+          11,
+          13
+        ],
+        [
+          12619,
+          11,
+          13
+        ],
+        [
+          12681,
+          11,
+          13
+        ]
+      ]
+    }
+  ]
+}

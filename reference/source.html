@@ -1,0 +1,1152 @@
+<!doctype html>
+<!--
+  Quick Take: The time as spoken prose — the sentence written large, one phrase per line, in twelve languages.
+  Stack: Self-contained; no external libraries.
+  Source: https://datapoems.io/clocks/dial-prose/
+  License: MIT
+  Author: Luke Steuber
+-->
+<html class="collection-export embed" lang="en">
+<head>
+<script>window.CLOCK_COLLECTION_EXPORT=true;</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spoken Prose</title>
+<meta name="description" content="The time as spoken prose — the sentence written large, one phrase per line, in twelve languages.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=JetBrains+Mono:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;500&family=Noto+Sans+JP:wght@600;700&family=Noto+Sans+KR:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  /* Apple TV / 4K: scale the rem-based HUD up for 10-foot viewing. */
+  @media (min-width: 1900px) { html { font-size: 22px; } }
+  @media (min-width: 2800px) { html { font-size: 30px; } }
+  @media (max-width: 1100px), (max-height: 1100px) { html { font-size: 13px; } }
+  @media (max-width: 800px),  (max-height: 800px)  { html { font-size: 11px; } }
+  @media (max-width: 600px),  (max-height: 600px)  { html { font-size: 9px;  } }
+  @media (max-width: 420px),  (max-height: 420px)  { html { font-size: 7px;  } }
+
+  :root {
+    --bg: #000000;
+    --dim: rgba(255,255,255,0.18);
+    --on: #ffffff;
+    --text: rgba(255,255,255,0.5);
+    --duration: 360ms;
+    --easing: cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    transition: background 600ms ease;
+  }
+  body.palette-paper, body.palette-riso, body.palette-sky { --text: rgba(40,25,15,0.55); }
+
+  /* Per-language font swaps. Latin and Cyrillic scripts keep Cormorant
+     Garamond. Japanese, Korean and Arabic get scripts that actually shape
+     correctly — Cormorant has no glyphs for any of these and would fall
+     back to system fonts with inconsistent metrics across machines. */
+  body.lang-ja { font-family: "Noto Sans JP", "Cormorant Garamond", sans-serif; }
+  body.lang-ko { font-family: "Noto Sans KR", "Cormorant Garamond", sans-serif; }
+  body.lang-ar {
+    /* Noto Naskh Arabic is a classical reading-text Naskh, much gentler
+       than a geometric sans. Lighter weight matches the elegance of the
+       script. */
+    font-family: "Noto Naskh Arabic", "Cormorant Garamond", serif;
+    font-weight: 500;
+  }
+  /* CJK and Arabic lines never take the italic connector style — those
+     scripts have no cursive italic and a synthesized oblique reads as a
+     rendering bug. The quiet tone comes from opacity alone. */
+  body.lang-ja .line, body.lang-ko .line, body.lang-ar .line { font-style: normal; }
+  /* Arabic prose lines render right-to-left so letter shaping (initial/
+     medial/final/isolated) is correct inside each line. The stack itself
+     is centered, so flipping line direction doesn't reorder the layout —
+     only the glyphs inside each line reshape. letter-spacing must be zero
+     or cursive shaping breaks (the space between glyphs disconnects the
+     joins). text-transform:none in case any palette adds uppercase —
+     Arabic has no case. */
+  body.lang-ar .line {
+    direction: rtl;
+    unicode-bidi: isolate;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+  #stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  /* The sentence as prose: one phrase-part per line, stacked down the
+     middle of the viewport. Hours carry the largest measure, minutes
+     slightly smaller, connective tissue quiet and italic. */
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.4rem, 1.6vmin, 1.5rem);
+    max-width: 94vw;
+  }
+  .line {
+    display: block;
+    white-space: nowrap;
+    line-height: 1.12;
+    color: var(--on);
+    font-size: clamp(1.8rem, 6.2vmin, 6rem);
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--duration) var(--easing),
+                transform var(--duration) var(--easing),
+                color 600ms ease;
+  }
+  .line[data-type="hours"] { font-size: clamp(2.1rem, 7.6vmin, 7.2rem); }
+  .line[data-type="desc"] {
+    font-size: clamp(1.2rem, 3.5vmin, 3.2rem);
+    font-style: italic;
+    opacity: 0.64;
+  }
+  .line.pre  { opacity: 0; transform: translateY(0.45em); }
+  .line.out  { opacity: 0; transform: translateY(-0.35em); }
+
+  /* Quiet caption under the stack: digital time + language name. */
+  .caption {
+    margin-top: clamp(1.4rem, 4vmin, 3.2rem);
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+
+  /* Gallery link, top-right. */
+  .hud {
+    position: fixed;
+    top: max(1.4rem, env(safe-area-inset-top));
+    right: max(1.6rem, env(safe-area-inset-right));
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    z-index: 20;
+  }
+  .hud .help {
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.55;
+    transition: opacity 220ms ease;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1;
+    padding: 0.55rem 0.85rem;
+  }
+  .hud .help:hover { opacity: 0.95; }
+
+  /* Language switcher: vertical list of codes on the left edge. The Latin
+     codes always render in JetBrains Mono regardless of which script the
+     current language uses, so the list stays consistent. */
+  .langs {
+    position: fixed;
+    left: max(1.5rem, env(safe-area-inset-left));
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 1.3rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    z-index: 20;
+  }
+  .langs .lang {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 220ms ease;
+    padding: 0.4rem 0.65rem;
+    color: var(--text);
+    background: none;
+    border: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: left;
+  }
+  .langs .lang.active { opacity: 1; }
+  .langs .lang:hover { opacity: 0.85; }
+
+  /* Short landscape screens: shrink the vertical list so all twelve codes
+     stay on screen. */
+  @media (max-height: 700px) and (min-width: 721px) {
+    .langs { font-size: 1.05rem; gap: 0; }
+    .langs .lang { padding: 0.28rem 0.55rem; }
+  }
+
+  /* Narrow screens: the language list becomes a horizontal scroll row
+     along the bottom edge. */
+  @media (max-width: 720px) {
+    .langs {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      transform: none;
+      flex-direction: row;
+      justify-content: flex-start;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 0.6rem max(0.9rem, env(safe-area-inset-right)) max(0.8rem, env(safe-area-inset-bottom)) max(0.9rem, env(safe-area-inset-left));
+    }
+    .langs::-webkit-scrollbar { width: 0; height: 0; }
+    .langs .lang { flex-shrink: 0; padding: 0.35rem 0.5rem; }
+  }
+
+  /* Phone viewports need a reading scale, not the tiny HUD scale used by
+     embedded gallery previews. The vmin measures keep portrait and short
+     landscape proportional; the longest phrase in every language still
+     fits within the stage at 320 CSS pixels wide. */
+  @media (max-width: 720px), (max-height: 500px) and (max-width: 1000px) {
+    html { font-size: 10px; }
+    .stack {
+      max-width: 96vw;
+      gap: clamp(0.8rem, 2vmin, 1.4rem);
+    }
+    .line { font-size: clamp(2rem, 9.6vmin, 5.4rem); }
+    .line[data-type="hours"] { font-size: clamp(2.4rem, 11.8vmin, 6.4rem); }
+    .line[data-type="desc"] { font-size: clamp(1.4rem, 5.3vmin, 3.2rem); }
+    .caption {
+      margin-top: clamp(1.6rem, 4.5vmin, 2.4rem);
+      font-size: 1.1rem;
+      letter-spacing: 0.24em;
+    }
+    .hud { font-size: 1.2rem; letter-spacing: 0.2em; }
+    .hud .help {
+      display: grid;
+      place-items: center;
+      min-width: 4.4rem;
+      min-height: 4.4rem;
+      font-size: 2rem;
+      padding: 0;
+    }
+    .langs { font-size: 1.2rem; letter-spacing: 0.22em; }
+  }
+  @media (max-width: 720px) {
+    .langs .lang {
+      min-width: 4.4rem;
+      min-height: 4.4rem;
+      padding: 0.8rem 1rem;
+      text-align: center;
+    }
+  }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .langs .lang:focus-visible, .hud .help:focus-visible {
+    outline: 1px solid var(--on);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body, .line, .langs .lang, .hud .help { transition: none !important; }
+  }
+</style>
+<style data-collection-chrome>
+.dev-controls,
+.study-controls,
+.help,
+.back,
+.about-backdrop,
+.about-modal,
+.about-card,
+.gate-controls,
+a[aria-label*='about' i],
+button[aria-label*='about' i],
+a[aria-label*='help' i],
+button[aria-label*='help' i],
+a[aria-label*='all clocks' i],
+button[aria-label*='all clocks' i],
+a[aria-label*='clock gallery' i],
+button[aria-label*='clock gallery' i],
+.langs,
+.hud{display:none!important}
+</style>
+</head>
+<body class="collection-export embed">
+
+<main id="stage">
+  <div class="stack" id="stack"></div>
+  <div class="caption" id="caption" aria-hidden="true"></div>
+</main>
+
+<span class="langs" id="langs"></span>
+
+<div class="hud" id="hud">
+  <a class="help" href="https://datapoems.io/clocks/" title="all the clocks" aria-label="back to the clocks gallery">?</a>
+</div>
+
+<div id="sr" class="sr-only" aria-live="polite"></div>
+
+<script>/* fail-soft storage: sandboxed embeds and blocked-cookie browsers throw on localStorage access; never let that stop a clock */window.__clockStore=(function(){try{var s=window.localStorage;s.getItem;return s;}catch(e){return{getItem:function(){return null;},setItem:function(){},removeItem:function(){}};}})();</script>
+<script>
+/*
+ * Word Time engine — the multilingual spoken-time data and grammar from
+ * /clocks/dial/ (Word Dial), extracted verbatim so derivative clocks share
+ * one source of truth. Attaches window.WORD_TIME with:
+ *   LANGUAGES, HOURS, SUBJECT_PHRASE, DIAL_LAYOUT, timeWords(lang, h, m).
+ * Active consumers: dial-matrix, dial-prose, dial-spiral, dial-ticker. The
+ * archived dial-bezel also imports this file. Keep grammar edits in sync with /clocks/dial/index.html or
+ * migrate the dial itself onto this file deliberately (not casually).
+ */
+(function (root) {
+"use strict";
+
+const LANGUAGES = ['en','de','fr','it','es','pt','nl','sv','uk','ja','zh','ko','ar'];
+
+const HOURS = {
+  en: ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'],
+  de: ['eins','zwei','drei','vier','fünf','sechs','sieben','acht','neun','zehn','elf','zwölf'],
+  fr: ['une','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','midi'],
+  it: ['una','due','tre','quattro','cinque','sei','sette','otto','nove','dieci','undici','dodici'],
+  es: ['una','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce'],
+  pt: ['uma','duas','três','quatro','cinco','seis','sete','oito','nove','dez','onze','doze'],
+  nl: ['een','twee','drie','vier','vijf','zes','zeven','acht','negen','tien','elf','twaalf'],
+  sv: ['ett','två','tre','fyra','fem','sex','sju','åtta','nio','tio','elva','tolv'],
+  uk: ['перша','друга','третя','четверта','пʼята','шоста','сьома','восьма','девʼята','десята','одинадцята','дванадцята'],
+  ja: ['一時','二時','三時','四時','五時','六時','七時','八時','九時','十時','十一時','十二時'],
+  zh: ['一点','两点','三点','四点','五点','六点','七点','八点','九点','十点','十一点','十二点'],
+  ko: ['한시','두시','세시','네시','다섯시','여섯시','일곱시','여덟시','아홉시','열시','열한시','열두시'],
+  ar: ['الواحدة','الثانية','الثالثة','الرابعة','الخامسة','السادسة','السابعة','الثامنة','التاسعة','العاشرة','الحادية عشرة','الثانية عشرة'],
+};
+
+const SUBJECT_PHRASE = {
+  en: 'it is',
+  de: 'es ist',
+  fr: 'il est',
+  it: 'sono le',
+  es: 'son las',
+  pt: 'são as',
+  nl: 'het is',
+  sv: 'klockan är',
+  uk: 'зараз',
+  ja: '今は',
+  zh: '现在',
+  ko: '지금',
+  ar: 'الساعة',
+};
+
+const DIAL_LAYOUT = {
+  en: {
+    minutes: [
+      { word:'five',       label:'five',          type:'minutes' },
+      { word:'ten',        label:'ten',           type:'minutes' },
+      { word:'quarter',    label:'quarter',       type:'minutes' },
+      { word:'twenty',     label:'twenty',        type:'minutes' },
+      { word:'twentyfive', label:'twenty\nfive',  type:'minutes' },
+    ],
+    connectors: [
+      { word:'oclock', label:"o'clock",  type:'desc' },
+      { word:'till',   label:'till',     type:'desc' },
+      { word:'past',   label:'past',     type:'desc' },
+      { word:'half',   label:'half',     type:'minutes' },
+    ],
+    articles: [
+      { word:'a', label:'a', type:'desc' },
+    ],
+    hours: ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'],
+  },
+  de: {
+    minutes: [
+      { word:'fünf',    label:'fünf',    type:'minutes' },
+      { word:'zehn',    label:'zehn',    type:'minutes' },
+      { word:'viertel', label:'viertel', type:'minutes' },
+      { word:'zwanzig', label:'zwanzig', type:'minutes' },
+    ],
+    connectors: [
+      { word:'uhr',  label:'uhr',  type:'desc' },
+      { word:'vor',  label:'vor',  type:'desc' },
+      { word:'nach', label:'nach', type:'desc' },
+      { word:'halb', label:'halb', type:'minutes' },
+    ],
+    hours: ['eins','zwei','drei','vier','fünf','sechs','sieben','acht','neun','zehn','elf','zwölf'],
+  },
+  fr: {
+    minutes: [
+      { word:'cinq',       label:'cinq',         type:'minutes' },
+      { word:'dix',        label:'dix',          type:'minutes' },
+      { word:'quart',      label:'quart',        type:'minutes' },
+      { word:'vingt',      label:'vingt',        type:'minutes' },
+      { word:'vingt-cinq', label:'vingt\ncinq',  type:'minutes' },
+    ],
+    connectors: [
+      { word:'demie',  label:'demie',  type:'minutes' },
+      { word:'et',     label:'et',     type:'desc' },
+      { word:'moins',  label:'moins',  type:'desc' },
+      { word:'heures', label:'heures', type:'desc' },
+    ],
+    articles: [
+      { word:'le', label:'le', type:'desc' },
+    ],
+    hours: ['une','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','midi'],
+  },
+  it: {
+    minutes: [
+      { word:'cinque',      label:'cinque',         type:'minutes' },
+      { word:'dieci',       label:'dieci',          type:'minutes' },
+      { word:'quarto',      label:'quarto',         type:'minutes' },
+      { word:'venti',       label:'venti',          type:'minutes' },
+      { word:'venticinque', label:'venti-\ncinque', type:'minutes' },
+    ],
+    connectors: [
+      { word:'mezza',   label:'mezza',    type:'minutes' },
+      { word:'e',       label:'e',        type:'desc' },
+      { word:'meno',    label:'meno',     type:'desc' },
+      { word:'inpunto', label:'in punto', type:'desc' },
+    ],
+    articles: [
+      { word:'un', label:'un', type:'desc' },
+    ],
+    hours: ['una','due','tre','quattro','cinque','sei','sette','otto','nove','dieci','undici','dodici'],
+  },
+  es: {
+    minutes: [
+      { word:'cinco',       label:'cinco',         type:'minutes' },
+      { word:'diez',        label:'diez',          type:'minutes' },
+      { word:'cuarto',      label:'cuarto',        type:'minutes' },
+      { word:'veinte',      label:'veinte',        type:'minutes' },
+      { word:'veinticinco', label:'veinti-\ncinco',type:'minutes' },
+    ],
+    connectors: [
+      { word:'media',   label:'media',    type:'minutes' },
+      { word:'y',       label:'y',        type:'desc' },
+      { word:'menos',   label:'menos',    type:'desc' },
+      { word:'enpunto', label:'en punto', type:'desc' },
+    ],
+    hours: ['una','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce'],
+  },
+  pt: {
+    minutes: [
+      { word:'cinco',     label:'cinco',         type:'minutes' },
+      { word:'dez',       label:'dez',           type:'minutes' },
+      { word:'quinze',    label:'quinze',        type:'minutes' },
+      { word:'vinte',     label:'vinte',         type:'minutes' },
+      { word:'vintecinco',label:'vinte e\ncinco',type:'minutes' },
+    ],
+    connectors: [
+      { word:'meia',  label:'meia',  type:'minutes' },
+      { word:'e',     label:'e',     type:'desc' },
+      { word:'menos', label:'menos', type:'desc' },
+      { word:'horas', label:'horas', type:'desc' },
+    ],
+    hours: ['uma','duas','três','quatro','cinco','seis','sete','oito','nove','dez','onze','doze'],
+  },
+  nl: {
+    minutes: [
+      { word:'vijf',  label:'vijf',  type:'minutes' },
+      { word:'tien',  label:'tien',  type:'minutes' },
+      { word:'kwart', label:'kwart', type:'minutes' },
+    ],
+    connectors: [
+      { word:'over', label:'over', type:'desc' },
+      { word:'voor', label:'voor', type:'desc' },
+      { word:'half', label:'half', type:'minutes' },
+      { word:'uur',  label:'uur',  type:'desc' },
+    ],
+    hours: ['een','twee','drie','vier','vijf','zes','zeven','acht','negen','tien','elf','twaalf'],
+  },
+  sv: {
+    minutes: [
+      { word:'fem',   label:'fem',   type:'minutes' },
+      { word:'tio',   label:'tio',   type:'minutes' },
+      { word:'kvart', label:'kvart', type:'minutes' },
+    ],
+    connectors: [
+      { word:'över', label:'över', type:'desc' },
+      { word:'i',    label:'i',    type:'desc' },
+      { word:'halv', label:'halv', type:'minutes' },
+    ],
+    hours: ['ett','två','tre','fyra','fem','sex','sju','åtta','nio','tio','elva','tolv'],
+  },
+  uk: {
+    // Ukrainian — feminine ordinal hours (used for time). Pattern is a
+    // simplified "(hour) і (minute)" past, "(next-hour) без (60-min)" to.
+    // This skips the traditional case-shifting forms ("пів на четверту")
+    // because the dial can't model dual hour-name shapes per slot.
+    minutes: [
+      { word:'piat',          label:'пʼять',           type:'minutes' },
+      { word:'desiat',        label:'десять',          type:'minutes' },
+      { word:'chvert',        label:'чверть',          type:'minutes' },
+      { word:'dvadtsiat',     label:'двадцять',        type:'minutes' },
+      { word:'dvadtsiatpiat', label:'двадцять\nпʼять', type:'minutes' },
+    ],
+    connectors: [
+      { word:'piv', label:'пів', type:'minutes' },
+      { word:'i',   label:'і',   type:'desc' },
+      { word:'bez', label:'без', type:'desc' },
+    ],
+    hours: ['перша','друга','третя','четверта','пʼята','шоста','сьома','восьма','девʼята','десята','одинадцята','дванадцята'],
+  },
+  ja: {
+    minutes: [
+      { word:'go',    label:'五',    type:'minutes' },
+      { word:'ju',    label:'十',    type:'minutes' },
+      { word:'juugo', label:'十五',  type:'minutes' },
+      { word:'nijuu', label:'二十',  type:'minutes' },
+      { word:'nijuugo', label:'二十\n五', type:'minutes' },
+    ],
+    connectors: [
+      { word:'fun',  label:'分',  type:'desc' },
+      { word:'han',  label:'半',  type:'minutes' },
+      { word:'mae',  label:'前',  type:'desc' },
+      { word:'desu', label:'です', type:'desc' },
+    ],
+    hours: ['一時','二時','三時','四時','五時','六時','七時','八時','九時','十時','十一時','十二時'],
+  },
+  zh: {
+    minutes: [
+      { word:'wu',     label:'五',     type:'minutes' },
+      { word:'shi',    label:'十',     type:'minutes' },
+      { word:'shiwu',  label:'十五',   type:'minutes' },
+      { word:'ershi',  label:'二十',   type:'minutes' },
+      { word:'ershiwu',label:'二十\n五', type:'minutes' },
+    ],
+    connectors: [
+      { word:'fen',   label:'分',   type:'desc' },
+      { word:'ban',   label:'半',   type:'minutes' },
+      { word:'cha',   label:'差',   type:'desc' },
+      { word:'xianzai', label:'现在', type:'desc' },
+    ],
+    hours: ['一点','两点','三点','四点','五点','六点','七点','八点','九点','十点','十一点','十二点'],
+  },
+  ko: {
+    minutes: [
+      { word:'o',       label:'오',     type:'minutes' },
+      { word:'sip',     label:'십',     type:'minutes' },
+      { word:'sipo',    label:'십오',   type:'minutes' },
+      { word:'isip',    label:'이십',   type:'minutes' },
+      { word:'isipo',   label:'이십\n오', type:'minutes' },
+    ],
+    connectors: [
+      { word:'bun',   label:'분',     type:'desc' },
+      { word:'ban',   label:'반',     type:'minutes' },
+      { word:'jeon',  label:'전',     type:'desc' },
+      { word:'imnida',label:'입니다', type:'desc' },
+    ],
+    hours: ['한시','두시','세시','네시','다섯시','여섯시','일곱시','여덟시','아홉시','열시','열한시','열두시'],
+  },
+  ar: {
+    // Arabic minute words read right-to-left in their labels (CSS sets
+    // direction: rtl on .dial-word for the ar body class). The dial slot
+    // positions are unchanged — only glyph shaping inside each label flips.
+    minutes: [
+      { word:'khams',     label:'خمس',     type:'minutes' },
+      { word:'ashr',      label:'عشر',     type:'minutes' },
+      { word:'rub',       label:'الربع',   type:'minutes' },
+      { word:'ishrun',    label:'عشرون',   type:'minutes' },
+      { word:'khamswaishrun', label:'خمس\nوعشرون', type:'minutes' },
+    ],
+    connectors: [
+      { word:'wa',     label:'و',      type:'desc' },
+      { word:'illa',   label:'إلا',    type:'desc' },
+      { word:'nisf',   label:'النصف',  type:'minutes' },
+      { word:'daqaiq', label:'دقائق',  type:'desc' },
+    ],
+    hours: ['الواحدة','الثانية','الثالثة','الرابعة','الخامسة','السادسة','السابعة','الثامنة','التاسعة','العاشرة','الحادية عشرة','الثانية عشرة'],
+  },
+};
+
+// =============================================================================
+// Time → words (verbatim per language for accuracy)
+// =============================================================================
+
+function timeWords(lang, hours, minutes) {
+  const wH = HOURS[lang];
+  const m5 = minutes - (minutes % 5);
+  const h12 = hours > 0 ? hours : 12;
+  const out = [];
+  const add = (word, type) => out.push({ word, type });
+  const wordAtH = off => wH[((h12 - 1 + off) % 12 + 12) % 12];
+
+  if (lang === 'en') {
+    add('it', 'desc'); add('is', 'desc');
+    if (m5 === 0) { add(wordAtH(0), 'hours'); add('oclock', 'desc'); }
+    else if (m5 === 5)  { add('five', 'minutes');                  add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 10) { add('ten', 'minutes');                   add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 15) { add('a', 'desc'); add('quarter', 'minutes'); add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 20) { add('twenty', 'minutes');                add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 25) { add('twentyfive', 'minutes');            add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 30) { add('half', 'minutes');                  add('past', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 35) { add('twentyfive', 'minutes');            add('till', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 40) { add('twenty', 'minutes');                add('till', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 45) { add('a', 'desc'); add('quarter', 'minutes'); add('till', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 50) { add('ten', 'minutes');                   add('till', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 55) { add('five', 'minutes');                  add('till', 'desc'); add(wordAtH(1), 'hours'); }
+  } else if (lang === 'de') {
+    add('es', 'desc'); add('ist', 'desc');
+    if (m5 === 0 && h12 % 12 === 1) { add('ein', 'hours'); add('uhr', 'desc'); }
+    else if (m5 === 0)  { add(wordAtH(0), 'hours'); add('uhr', 'desc'); }
+    else if (m5 === 5)  { add('fünf', 'minutes');    add('nach', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 10) { add('zehn', 'minutes');    add('nach', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 15) { add('viertel', 'minutes'); add('nach', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 20) { add('zwanzig', 'minutes'); add('nach', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 25) { add('fünf', 'minutes');    add('vor', 'desc'); add('halb', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 30) { add('halb', 'minutes');    add(wordAtH(1), 'hours'); }
+    else if (m5 === 35) { add('fünf', 'minutes');    add('nach', 'desc'); add('halb', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 40) { add('zwanzig', 'minutes'); add('vor', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 45) { add('viertel', 'minutes'); add('vor', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 50) { add('zehn', 'minutes');    add('vor', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 55) { add('fünf', 'minutes');    add('vor', 'desc'); add(wordAtH(1), 'hours'); }
+  } else if (lang === 'fr') {
+    add('il', 'desc'); add('est', 'desc');
+    // French grammar wrinkles the canonical word-clock data mishandles:
+    //   1. "midi" stands alone — "il est midi", never "il est midi heures".
+    //   2. The hour 0 (and rollovers to it, e.g. 23:35) is "minuit", not "midi".
+    //   3. One o'clock is singular: "il est une heure", not "une heures".
+    // The dial's clock-face only places "midi" and "heures" (no minuit/heure
+    // slots), so paintDial falls back: minuit → midi slot, heure → heures slot.
+    const namedHour = (off) => (hours + off + 24) % 24;
+    const hourWord  = (off) => {
+      const w = wordAtH(off);
+      return (w === 'midi' && namedHour(off) === 0) ? 'minuit' : w;
+    };
+    const heures = (off) => {
+      const w = hourWord(off);
+      if (w === 'midi' || w === 'minuit') return;
+      add(w === 'une' ? 'heure' : 'heures', 'desc');
+    };
+    if (m5 === 0)        { add(hourWord(0), 'hours'); heures(0); }
+    else if (m5 === 5)   { add(hourWord(0), 'hours'); heures(0); add('cinq', 'minutes'); }
+    else if (m5 === 10)  { add(hourWord(0), 'hours'); heures(0); add('dix', 'minutes'); }
+    else if (m5 === 15)  { add(hourWord(0), 'hours'); heures(0); add('et', 'desc'); add('quart', 'minutes'); }
+    else if (m5 === 20)  { add(hourWord(0), 'hours'); heures(0); add('vingt', 'minutes'); }
+    else if (m5 === 25)  { add(hourWord(0), 'hours'); heures(0); add('vingt-cinq', 'minutes'); }
+    else if (m5 === 30)  { add(hourWord(0), 'hours'); heures(0); add('et', 'desc'); add('demie', 'minutes'); }
+    else if (m5 === 35)  { add(hourWord(1), 'hours'); heures(1); add('moins', 'desc'); add('vingt-cinq', 'minutes'); }
+    else if (m5 === 40)  { add(hourWord(1), 'hours'); heures(1); add('moins', 'desc'); add('vingt', 'minutes'); }
+    else if (m5 === 45)  { add(hourWord(1), 'hours'); heures(1); add('moins', 'desc'); add('le', 'desc'); add('quart', 'minutes'); }
+    else if (m5 === 50)  { add(hourWord(1), 'hours'); heures(1); add('moins', 'desc'); add('dix', 'minutes'); }
+    else if (m5 === 55)  { add(hourWord(1), 'hours'); heures(1); add('moins', 'desc'); add('cinq', 'minutes'); }
+  } else if (lang === 'it') {
+    add('sono', 'desc'); add('le', 'desc');
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('inpunto', 'desc'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('e', 'desc'); add('cinque', 'minutes'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('dieci', 'minutes'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('un', 'desc'); add('quarto', 'minutes'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('venti', 'minutes'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('venticinque', 'minutes'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('mezza', 'minutes'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('meno', 'desc'); add('venticinque', 'minutes'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('meno', 'desc'); add('venti', 'minutes'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('meno', 'desc'); add('un', 'desc'); add('quarto', 'minutes'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('meno', 'desc'); add('dieci', 'minutes'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('meno', 'desc'); add('cinque', 'minutes'); }
+  } else if (lang === 'es') {
+    if ((m5 > 30 && h12 % 12 === 0 && hours === 12) || (m5 < 35 && h12 % 12 === 1 && hours === 1)) {
+      add('es', 'desc'); add('la', 'desc');
+    } else {
+      add('son', 'desc'); add('las', 'desc');
+    }
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('enpunto', 'desc'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('y', 'desc'); add('cinco', 'minutes'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('y', 'desc'); add('diez', 'minutes'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('y', 'desc'); add('cuarto', 'minutes'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('y', 'desc'); add('veinte', 'minutes'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('y', 'desc'); add('veinticinco', 'minutes'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('y', 'desc'); add('media', 'minutes'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('veinticinco', 'minutes'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('veinte', 'minutes'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('cuarto', 'minutes'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('diez', 'minutes'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('cinco', 'minutes'); }
+  } else if (lang === 'pt') {
+    // Portuguese — modelled on Spanish. "São as" / "É a" for plural/singular.
+    if (h12 % 12 === 1) { add('é', 'desc'); add('a', 'desc'); }
+    else                { add('são', 'desc'); add('as', 'desc'); }
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('horas', 'desc'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('e', 'desc'); add('cinco', 'minutes'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('dez', 'minutes'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('quinze', 'minutes'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('vinte', 'minutes'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('vintecinco', 'minutes'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('e', 'desc'); add('meia', 'minutes'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('vintecinco', 'minutes'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('vinte', 'minutes'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('quinze', 'minutes'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('dez', 'minutes'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('menos', 'desc'); add('cinco', 'minutes'); }
+  } else if (lang === 'nl') {
+    // Dutch — half-hour anticipation. "Half drie" = 2:30.
+    add('het', 'desc'); add('is', 'desc');
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('uur', 'desc'); }
+    else if (m5 === 5)   { add('vijf', 'minutes');  add('over', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 10)  { add('tien', 'minutes');  add('over', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 15)  { add('kwart', 'minutes'); add('over', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 20)  { add('tien', 'minutes');  add('voor', 'desc'); add('half', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 25)  { add('vijf', 'minutes');  add('voor', 'desc'); add('half', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 30)  { add('half', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 35)  { add('vijf', 'minutes');  add('over', 'desc'); add('half', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 40)  { add('tien', 'minutes');  add('over', 'desc'); add('half', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 45)  { add('kwart', 'minutes'); add('voor', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 50)  { add('tien', 'minutes');  add('voor', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 55)  { add('vijf', 'minutes');  add('voor', 'desc'); add(wordAtH(1), 'hours'); }
+  } else if (lang === 'sv') {
+    // Swedish — same half-hour anticipation as Dutch ("halv fyra" = 3:30).
+    add('klockan', 'desc'); add('är', 'desc');
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); }
+    else if (m5 === 5)   { add('fem', 'minutes');   add('över', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 10)  { add('tio', 'minutes');   add('över', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 15)  { add('kvart', 'minutes'); add('över', 'desc'); add(wordAtH(0), 'hours'); }
+    else if (m5 === 20)  { add('tio', 'minutes');   add('i', 'desc');    add('halv', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 25)  { add('fem', 'minutes');   add('i', 'desc');    add('halv', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 30)  { add('halv', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 35)  { add('fem', 'minutes');   add('över', 'desc'); add('halv', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 40)  { add('tio', 'minutes');   add('över', 'desc'); add('halv', 'minutes'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 45)  { add('kvart', 'minutes'); add('i', 'desc');    add(wordAtH(1), 'hours'); }
+    else if (m5 === 50)  { add('tio', 'minutes');   add('i', 'desc');    add(wordAtH(1), 'hours'); }
+    else if (m5 === 55)  { add('fem', 'minutes');   add('i', 'desc');    add(wordAtH(1), 'hours'); }
+  } else if (lang === 'uk') {
+    // Ukrainian — feminine ordinal hours, і/без as past/to connectors.
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('i', 'desc'); add('piat', 'minutes'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('i', 'desc'); add('desiat', 'minutes'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('i', 'desc'); add('chvert', 'minutes'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('i', 'desc'); add('dvadtsiat', 'minutes'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('i', 'desc'); add('dvadtsiatpiat', 'minutes'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('i', 'desc'); add('piv', 'minutes'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('dvadtsiatpiat', 'minutes'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('dvadtsiat', 'minutes'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('chvert', 'minutes'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('desiat', 'minutes'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('piat', 'minutes'); }
+  } else if (lang === 'ja') {
+    // Japanese — hour-minute order, です at end. After half, the time is
+    // read as "(next hour) - (60-min) 前" — N minutes before next hour.
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('desu', 'desc'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('go', 'minutes');    add('fun', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('ju', 'minutes');    add('fun', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('juugo', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('nijuu', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('nijuugo', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('han', 'minutes'); add('desu', 'desc'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('nijuugo', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('nijuu', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('juugo', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('ju', 'minutes');    add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('go', 'minutes');    add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+  } else if (lang === 'zh') {
+    // Mandarin — 现在 + hour + minutes. After half: 差 + N分 + next hour.
+    add('xianzai', 'desc');
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('wu', 'minutes');     add('fen', 'desc'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('shi', 'minutes');    add('fen', 'desc'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('shiwu', 'minutes');  add('fen', 'desc'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('ershi', 'minutes');  add('fen', 'desc'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('ershiwu', 'minutes'); add('fen', 'desc'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('ban', 'minutes'); }
+    else if (m5 === 35)  { add('cha', 'desc'); add('ershiwu', 'minutes'); add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 40)  { add('cha', 'desc'); add('ershi', 'minutes');  add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 45)  { add('cha', 'desc'); add('shiwu', 'minutes');  add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 50)  { add('cha', 'desc'); add('shi', 'minutes');    add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+    else if (m5 === 55)  { add('cha', 'desc'); add('wu', 'minutes');     add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+  } else if (lang === 'ko') {
+    // Korean — native-Korean hours + Sino-Korean minutes. 입니다 ends polite.
+    // After half, "(next hour) (60-min) 분 전 입니다" — N minutes before next hour.
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('imnida', 'desc'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('o', 'minutes');     add('bun', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('sip', 'minutes');   add('bun', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('sipo', 'minutes');  add('bun', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('isip', 'minutes');  add('bun', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('isipo', 'minutes'); add('bun', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('ban', 'minutes'); add('imnida', 'desc'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('isipo', 'minutes'); add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('isip', 'minutes');  add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('sipo', 'minutes');  add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('sip', 'minutes');   add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('o', 'minutes');     add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+  } else if (lang === 'ar') {
+    // Arabic — ordinal feminine hours, و/إلا as past/to connectors. Uses
+    // العشرون (twenty) as the 20-minute word; some dialects say الثلث (third)
+    // — picking the modern colloquial form here for predictability.
+    if (m5 === 0)        { add(wordAtH(0), 'hours'); }
+    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('khams', 'minutes'); add('daqaiq', 'desc'); }
+    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('ashr', 'minutes');  add('daqaiq', 'desc'); }
+    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('rub', 'minutes'); }
+    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('ishrun', 'minutes'); add('daqaiq', 'desc'); }
+    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('khamswaishrun', 'minutes'); add('daqaiq', 'desc'); }
+    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('wa', 'desc'); add('nisf', 'minutes'); }
+    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('illa', 'desc'); add('khamswaishrun', 'minutes'); add('daqaiq', 'desc'); }
+    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('illa', 'desc'); add('ishrun', 'minutes'); add('daqaiq', 'desc'); }
+    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('illa', 'desc'); add('rub', 'minutes'); }
+    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('illa', 'desc'); add('ashr', 'minutes');  add('daqaiq', 'desc'); }
+    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('illa', 'desc'); add('khams', 'minutes'); add('daqaiq', 'desc'); }
+  }
+  return { words: out };
+}
+
+root.WORD_TIME = {
+  LANGUAGES: LANGUAGES,
+  HOURS: HOURS,
+  SUBJECT_PHRASE: SUBJECT_PHRASE,
+  DIAL_LAYOUT: DIAL_LAYOUT,
+  timeWords: timeWords,
+};
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+"use strict";
+
+// =============================================================================
+// State + helpers
+// =============================================================================
+
+const WT = window.WORD_TIME;
+const LANGUAGES = WT.LANGUAGES;
+
+// Five palettes, grouped so the cycle reads dark → dark → light → light → light
+// instead of bouncing between modes on every click.
+const PALETTES = [
+  { name:'Monochrome', body:'palette-mono',  bg:'#000000', dim:'rgba(255,255,255,0.31)', on:'#ffffff' },
+  { name:'Neon',       body:'palette-neon',  bg:'#0d0518', dim:'rgba(255,255,255,0.31)', on:'#ff66cc' },
+  { name:'Paper',      body:'palette-paper', bg:'#f3ecda', dim:'rgba(50,30,15,0.31)',    on:'#241612' },
+  { name:'Riso',       body:'palette-riso',  bg:'#fff3df', dim:'rgba(60,40,30,0.29)',    on:'#ff4a44' },
+  { name:'Sky',        body:'palette-sky',   bg:'#dde6ef', dim:'rgba(20,40,80,0.27)',    on:'#1a2e54' },
+];
+
+// Language names for the caption, in English so the mono HUD never needs
+// glyphs outside JetBrains Mono.
+const LANG_NAMES = {
+  en:'English', de:'German', fr:'French', it:'Italian', es:'Spanish', pt:'Portuguese',
+  nl:'Dutch', sv:'Swedish', uk:'Ukrainian', ja:'Japanese', ko:'Korean', ar:'Arabic',
+};
+
+// Phrase grouping fix-ups. Articles must never dangle off their noun
+// ("a quarter", "le quart", "un quarto" stay together); unit words attach
+// to the hour they measure ("ten o'clock", "trois heures", "drei uhr").
+const ARTICLE_WORDS = { en:['a'], fr:['le'], it:['un'] };
+const UNIT_WORDS = {
+  en:['oclock'], de:['uhr'], fr:['heures','heure'], it:['inpunto'],
+  es:['enpunto'], pt:['horas'], nl:['uur'],
+};
+
+const STORAGE = { lang: 'dial-prose.lang', palette: 'dial-prose.palette' };
+const stackEl = document.getElementById('stack');
+const captionEl = document.getElementById('caption');
+const langsEl = document.getElementById('langs');
+const srEl = document.getElementById('sr');
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+let currentLang = pickInitialLang();
+let paletteIndex = parseInt(window.__clockStore.getItem(STORAGE.palette) || '0', 10) % PALETTES.length;
+let lastPhrase = '';
+let lastCaption = '';
+let hasPainted = false;
+let swapToken = 0;
+
+function pickInitialLang() {
+  const stored = window.__clockStore.getItem(STORAGE.lang);
+  if (stored && LANGUAGES.includes(stored)) return stored;
+  const nav = (navigator.language || 'en').slice(0,2);
+  return LANGUAGES.includes(nav) ? nav : 'en';
+}
+
+// Display labels: layout entries carry the shaped glyphs (labels may hold
+// '\n' for the dial's two-line slots — prose joins them; a hyphen break
+// like 'venti-\ncinque' closes up to a hyphen, CJK labels close up with
+// no space at all); hours, subject words and the FR specials (minuit,
+// heure) display as themselves.
+const labelCache = {};
+function labelMapFor(lang) {
+  if (labelCache[lang]) return labelCache[lang];
+  const layout = WT.DIAL_LAYOUT[lang] || WT.DIAL_LAYOUT.en;
+  const cjk = lang === 'ja' || lang === 'ko';
+  const map = {};
+  const reg = (word, label) => {
+    map[word] = label.replace(/-\s*\n\s*/g, '-').replace(/\s*\n\s*/g, cjk ? '' : ' ');
+  };
+  (layout.minutes || []).forEach(w => reg(w.word, w.label));
+  (layout.connectors || []).forEach(w => reg(w.word, w.label));
+  (layout.articles || []).forEach(w => reg(w.word, w.label));
+  (layout.hours || []).forEach(h => reg(h, h));
+  (WT.SUBJECT_PHRASE[lang] || '').split(' ').forEach(w => reg(w, w));
+  labelCache[lang] = map;
+  return map;
+}
+
+function labelFor(lang, word) {
+  return labelMapFor(lang)[word] || word;
+}
+
+// Flatten the active phrase into a speakable sentence for the live region.
+function sentenceText(lang, words) {
+  const labels = labelMapFor(lang);
+  return words.map(w => labels[w.word] || w.word).join(' ');
+}
+
+// Group the word stream into phrase-part lines. Consecutive same-type
+// words chunk together, then three small grammar repairs:
+//   1. a trailing article in a desc run moves onto the next line;
+//   2. ja/ko endings (分/前/です, 분/전/입니다) attach to the content they
+//      complete — those languages read hours → minutes → ending;
+//   3. ar connectors attach forward (و خمس) and trailing units backward
+//      (خمس دقائق);
+//   4. unit words right after an hour join the hour line.
+function groupLines(lang, words) {
+  const runs = [];
+  for (const w of words) {
+    const last = runs[runs.length - 1];
+    if (last && last.type === w.type) last.words.push(w.word);
+    else runs.push({ type: w.type, words: [w.word] });
+  }
+
+  const arts = ARTICLE_WORDS[lang] || [];
+  for (let i = 0; i < runs.length - 1; i++) {
+    const r = runs[i];
+    if (r.type !== 'desc') continue;
+    while (r.words.length && arts.includes(r.words[r.words.length - 1])) {
+      runs[i + 1].words.unshift(r.words.pop());
+    }
+  }
+
+  let merged = runs.filter(r => r.words.length);
+
+  if (lang === 'ja' || lang === 'ko') {
+    const out = [];
+    for (const r of merged) {
+      if (r.type === 'desc' && out.length) out[out.length - 1].words.push(...r.words);
+      else out.push(r);
+    }
+    merged = out;
+  } else if (lang === 'ar') {
+    const out = [];
+    for (let i = 0; i < merged.length; i++) {
+      const r = merged[i];
+      if (r.type === 'desc') {
+        if (i < merged.length - 1) { merged[i + 1].words.unshift(...r.words); continue; }
+        if (out.length)            { out[out.length - 1].words.push(...r.words); continue; }
+      }
+      out.push(r);
+    }
+    merged = out;
+  } else {
+    const units = UNIT_WORDS[lang] || [];
+    for (let i = 1; i < merged.length; i++) {
+      const r = merged[i], prev = merged[i - 1];
+      if (r.type === 'desc' && prev.type === 'hours') {
+        while (r.words.length && units.includes(r.words[0])) prev.words.push(r.words.shift());
+      }
+    }
+    merged = merged.filter(r => r.words.length);
+  }
+
+  const joiner = lang === 'ja' ? '' : ' ';
+  return merged.map(r => ({
+    type: r.type,
+    text: r.words.map(w => labelFor(lang, w)).join(joiner),
+  }));
+}
+
+// =============================================================================
+// Prose renderer — outgoing lines fade/translate away, incoming lines fade
+// in staggered ~60ms per line. Reduced motion swaps instantly, and so does
+// the very first paint: a headless screenshot must always see a full clock.
+// =============================================================================
+
+function renderLines(lines, animate) {
+  const instant = REDUCED.matches || !animate;
+  const token = ++swapToken;
+  const old = Array.from(stackEl.children);
+
+  const build = () => {
+    if (token !== swapToken) return;
+    stackEl.innerHTML = '';
+    lines.forEach((ln, i) => {
+      const el = document.createElement('span');
+      el.className = 'line' + (instant ? '' : ' pre');
+      el.dataset.type = ln.type;
+      el.textContent = ln.text;
+      el.style.transitionDelay = instant ? '0ms' : (i * 60) + 'ms';
+      stackEl.appendChild(el);
+    });
+    if (instant) return;
+    // Flip out of .pre on a short timer rather than rAF: throttled-rAF
+    // contexts (hidden tabs, virtual-time headless) must never strand the
+    // lines at opacity 0. 40ms lets the start state paint first.
+    setTimeout(() => {
+      if (token !== swapToken) return;
+      stackEl.querySelectorAll('.pre').forEach(el => {
+        el.classList.remove('pre');
+        el.addEventListener('transitionend', () => { el.style.transitionDelay = '0ms'; }, { once: true });
+      });
+    }, 40);
+  };
+
+  if (instant || !old.length) { build(); return; }
+  old.forEach(el => { el.style.transitionDelay = '0ms'; el.classList.add('out'); });
+  setTimeout(build, 280);
+}
+
+// =============================================================================
+// Palette + lang
+// =============================================================================
+
+function applyPalette() {
+  const p = PALETTES[paletteIndex];
+  document.body.className = '';
+  document.body.classList.add(p.body);
+  applyLangBody();
+  const root = document.documentElement.style;
+  root.setProperty('--bg', p.bg);
+  root.setProperty('--dim', p.dim);
+  root.setProperty('--on', p.on);
+  window.__clockStore.setItem(STORAGE.palette, paletteIndex.toString());
+}
+
+// Body class controls per-language font + RTL. Called on boot and on
+// every language switch. Palette class is independent and survives.
+function applyLangBody() {
+  Array.from(document.body.classList).forEach(c => {
+    if (c.startsWith('lang-')) document.body.classList.remove(c);
+  });
+  document.body.classList.add('lang-' + currentLang);
+}
+
+function cyclePalette() {
+  paletteIndex = (paletteIndex + 1) % PALETTES.length;
+  applyPalette();
+}
+
+function buildLangBar() {
+  langsEl.innerHTML = '';
+  LANGUAGES.forEach((code, idx) => {
+    const el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'lang' + (code === currentLang ? ' active' : '');
+    el.setAttribute('aria-pressed', code === currentLang ? 'true' : 'false');
+    el.textContent = code;
+    el.dataset.code = code;
+    el.title = `${code} (${idx + 1})`;
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      switchLanguage(code);
+    });
+    langsEl.appendChild(el);
+  });
+}
+
+function switchLanguage(code) {
+  if (!LANGUAGES.includes(code) || code === currentLang) return;
+  currentLang = code;
+  window.__clockStore.setItem(STORAGE.lang, code);
+  langsEl.querySelectorAll('.lang').forEach(el => {
+    const on = el.dataset.code === code;
+    el.classList.toggle('active', on);
+    el.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  applyLangBody();
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), true);
+}
+
+// =============================================================================
+// Tick + interaction
+// =============================================================================
+
+// Paint only when the painted phrase changes; the caption (visual only)
+// may update every minute. force repaints on language switch and random
+// rolls, both user-initiated. The very first paint skips the entrance
+// stagger so any immediate screenshot sees the settled clock.
+function show(h, m, force) {
+  const { words } = WT.timeWords(currentLang, h, m);
+  const sentence = sentenceText(currentLang, words);
+  if (force || sentence !== lastPhrase) {
+    lastPhrase = sentence;
+    renderLines(groupLines(currentLang, words), hasPainted);
+    hasPainted = true;
+    srEl.textContent = sentence;
+  }
+  const cap = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0')
+            + ' · ' + LANG_NAMES[currentLang];
+  if (cap !== lastCaption) {
+    lastCaption = cap;
+    captionEl.textContent = cap;
+  }
+}
+
+function tick() {
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), false);
+}
+
+function setupInteraction() {
+  let downX = 0, downY = 0, downTime = 0, moved = false;
+  document.addEventListener('pointerdown', (e) => {
+    downX = e.clientX; downY = e.clientY;
+    downTime = performance.now();
+    moved = false;
+  });
+  document.addEventListener('pointermove', (e) => {
+    const dx = e.clientX - downX, dy = e.clientY - downY;
+    if (dx*dx + dy*dy > 36) moved = true;
+  });
+  document.addEventListener('pointerup', (e) => {
+    if (moved) return;
+    if (performance.now() - downTime > 500) return;
+    if (e.target.closest('.lang')) return;
+    if (e.target.closest('.help')) return;
+    cyclePalette();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key >= '1' && e.key <= '9') {
+      const idx = parseInt(e.key, 10) - 1;
+      if (idx < LANGUAGES.length) switchLanguage(LANGUAGES[idx]);
+    } else if (e.key === '0' && LANGUAGES.length > 9) {
+      switchLanguage(LANGUAGES[9]);
+    } else if (e.key === ' ' || e.key.toLowerCase() === 'p') {
+      cyclePalette();
+    }
+  });
+}
+
+// =============================================================================
+// Boot
+// =============================================================================
+
+function boot() {
+  applyPalette();
+  buildLangBar();
+  setupInteraction();
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), true);
+  setInterval(tick, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+<script>/* only count real visits, not gallery previews in an iframe */
+</script>
+</body>
+</html>

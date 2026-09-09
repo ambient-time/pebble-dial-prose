@@ -1,0 +1,36 @@
+{
+  "title": "Prose",
+  "controls": [
+    {
+      "key": "LANGUAGE",
+      "label": "Language",
+      "default": 0,
+      "options": [
+        "English",
+        "German",
+        "French",
+        "Italian",
+        "Spanish",
+        "Portuguese",
+        "Dutch",
+        "Swedish",
+        "Ukrainian",
+        "Japanese",
+        "Chinese",
+        "Korean",
+        "Arabic"
+      ]
+    },
+    {
+      "key": "THEME",
+      "label": "Theme",
+      "default": 0,
+      "options": [
+        "Original",
+        "Paper",
+        "Amber",
+        "Ice"
+      ]
+    }
+  ]
+}

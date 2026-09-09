@@ -4,6 +4,7 @@ PEBBLE ?= pebble
 assets:
 	$(PYTHON) test/generate.py
 test:
+	node test/theme-settings.cjs
 	$(PYTHON) test/check.py
 	$(PYTHON) tools/languages/check.py .
 build:

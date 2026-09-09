@@ -54,7 +54,7 @@ def validate_build(root):
     require(pebble['uuid'] == UUID, 'Dial Prose UUID must be preserved')
     targets = pebble['targetPlatforms']
     require(len(targets) == len(SIZES) and set(targets) == set(SIZES), 'Expected exactly six target platforms')
-    require(pebble.get('capabilities') == ['configurable'] and pebble.get('messageKeys') == {'LANGUAGE': 0}, 'Expected language settings channel')
+    require(pebble.get('capabilities') == ['configurable'] and pebble.get('messageKeys') == {'LANGUAGE': 0, 'THEME': 90, 'REQUEST_STATE': 91}, 'Expected language settings channel')
     # The SDK names its bundle after the checkout directory, including imported ZIPs.
     pbw = root / 'build' / f'{root.name}.pbw'
     with zipfile.ZipFile(pbw) as archive:
@@ -66,7 +66,7 @@ def validate_build(root):
         require(manifest['watchapp']['watchface'] is True, 'PBW is not a watchface')
         declared = manifest['targetPlatforms']
         require(len(declared) == len(SIZES) and set(declared) == set(SIZES), 'PBW target mismatch')
-        require(manifest['capabilities'] == ['configurable'] and manifest['appKeys'] == {'LANGUAGE': 0}, 'PBW language settings mismatch')
+        require(manifest['capabilities'] == ['configurable'] and manifest['appKeys'] == {'LANGUAGE': 0, 'THEME': 90, 'REQUEST_STATE': 91}, 'PBW language settings mismatch')
         require('pebble-js-app.js' in archive.namelist(), 'Missing phone settings bundle')
         require(any(item.get('menuIcon') for item in manifest['resources']['media']), 'Missing menu icon')
         for platform in sorted(SIZES):

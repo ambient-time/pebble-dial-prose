@@ -12,7 +12,7 @@ with zipfile.ZipFile(pbw) as z:
  info=json.loads(z.read('appinfo.json'))
  assert info['uuid']==pkg['pebble']['uuid'] and info['versionLabel']==version
  assert set(info['targetPlatforms'])==platforms
- assert info['appKeys']=={'LANGUAGE':0} and info['capabilities']==['configurable']
+ assert info['appKeys']=={'LANGUAGE':0,'THEME':90,'REQUEST_STATE':91} and info['capabilities']==['configurable']
  assert 'pebble-js-app.js' in z.namelist()
  for target in platforms:
   m=json.loads(z.read(target+'/manifest.json'))

@@ -1,7 +1,7 @@
 {
   "name": "dial-prose",
   "author": "Luke Steuber",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "keywords": [
     "pebble-app"
@@ -27,7 +27,9 @@
       "watchface": true
     },
     "messageKeys": {
-      "LANGUAGE": 0
+      "LANGUAGE": 0,
+      "THEME": 90,
+      "REQUEST_STATE": 91
     },
     "resources": {
       "media": [

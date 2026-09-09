@@ -18,8 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 UUID = 'b824aad2-f29d-4081-a6f6-60a19f00262d'
 SIZES = {'basalt': (144, 168), 'diorite': (144, 168), 'emery': (200, 228),
          'flint': (144, 168), 'chalk': (180, 180), 'gabbro': (260, 260)}
-ROOT_FILES = ('package.json', 'wscript', 'Makefile', 'README.md', 'LICENSE', '.gitignore', '.gitattributes')
-SOURCE_DIRS = ('src', 'resources', 'reference', 'test')
+ROOT_FILES = ('package.json', 'package-lock.json', 'wscript', 'Makefile', 'README.md', 'LICENSE', '.gitignore', '.gitattributes')
+SOURCE_DIRS = ('src', 'resources', 'reference', 'test', 'tools')
 REQUIRED_FRAMES = {'hero', 'idle', 'quarter', 'twentyfive', 'eleven-till', 'seven-quarter', 'eight-oclock', 'eight-till', 'noon', 'midnight', 'before-five', 'five-rollover', 'before-noon', 'noon-rollover', 'before-midnight', 'midnight-rollover'}
 
 
@@ -54,7 +54,7 @@ def validate_build(root):
     require(pebble['uuid'] == UUID, 'Dial Prose UUID must be preserved')
     targets = pebble['targetPlatforms']
     require(len(targets) == len(SIZES) and set(targets) == set(SIZES), 'Expected exactly six target platforms')
-    require(not pebble.get('capabilities') and not pebble.get('appKeys'), 'Source must remain offline without app keys')
+    require(pebble.get('capabilities') == ['configurable'] and pebble.get('messageKeys') == {'LANGUAGE': 0}, 'Expected language settings channel')
     # The SDK names its bundle after the checkout directory, including imported ZIPs.
     pbw = root / 'build' / f'{root.name}.pbw'
     with zipfile.ZipFile(pbw) as archive:
@@ -66,13 +66,16 @@ def validate_build(root):
         require(manifest['watchapp']['watchface'] is True, 'PBW is not a watchface')
         declared = manifest['targetPlatforms']
         require(len(declared) == len(SIZES) and set(declared) == set(SIZES), 'PBW target mismatch')
-        require(not manifest['capabilities'] and not manifest['appKeys'], 'PBW must remain offline without app keys')
+        require(manifest['capabilities'] == ['configurable'] and manifest['appKeys'] == {'LANGUAGE': 0}, 'PBW language settings mismatch')
+        require('pebble-js-app.js' in archive.namelist(), 'Missing phone settings bundle')
         require(any(item.get('menuIcon') for item in manifest['resources']['media']), 'Missing menu icon')
         for platform in sorted(SIZES):
             contents = json.loads(archive.read(f'{platform}/manifest.json'))
             for kind in ('application', 'resources'):
                 item = contents[kind]
                 payload = archive.read(f'{platform}/{item["name"]}')
+                if kind == 'resources':
+                    require(len(payload) <= 262144, f'{platform}: store resource budget exceeded')
                 require(len(payload) == item['size'] > 0, f'{platform}: incorrect {kind} size')
                 require(crc32(payload) == item['crc'], f'{platform}: incorrect {kind} STM32 CRC')
     check_png(root / 'resources/images/menu-icon.png', (25, 25))

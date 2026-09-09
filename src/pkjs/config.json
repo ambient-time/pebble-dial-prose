@@ -1,0 +1,70 @@
+[
+  {
+    "type": "heading",
+    "defaultValue": "Prose"
+  },
+  {
+    "type": "select",
+    "messageKey": "LANGUAGE",
+    "label": "Language",
+    "defaultValue": "0",
+    "options": [
+      {
+        "label": "English",
+        "value": "0"
+      },
+      {
+        "label": "German",
+        "value": "1"
+      },
+      {
+        "label": "French",
+        "value": "2"
+      },
+      {
+        "label": "Italian",
+        "value": "3"
+      },
+      {
+        "label": "Spanish",
+        "value": "4"
+      },
+      {
+        "label": "Portuguese",
+        "value": "5"
+      },
+      {
+        "label": "Dutch",
+        "value": "6"
+      },
+      {
+        "label": "Swedish",
+        "value": "7"
+      },
+      {
+        "label": "Ukrainian",
+        "value": "8"
+      },
+      {
+        "label": "Japanese",
+        "value": "9"
+      },
+      {
+        "label": "Chinese",
+        "value": "10"
+      },
+      {
+        "label": "Korean",
+        "value": "11"
+      },
+      {
+        "label": "Arabic",
+        "value": "12"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save language"
+  }
+]

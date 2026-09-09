@@ -1,18 +1,20 @@
 {
   "name": "dial-prose",
   "author": "Luke Steuber",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "keywords": [
     "pebble-app"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@rebble/clay": "1.0.10"
+  },
   "pebble": {
     "displayName": "Prose",
     "companyName": "Luke Steuber",
     "uuid": "b824aad2-f29d-4081-a6f6-60a19f00262d",
     "sdkVersion": "3",
-    "enableMultiJS": false,
+    "enableMultiJS": true,
     "targetPlatforms": [
       "basalt",
       "chalk",
@@ -24,7 +26,9 @@
     "watchapp": {
       "watchface": true
     },
-    "messageKeys": [],
+    "messageKeys": {
+      "LANGUAGE": 0
+    },
     "resources": {
       "media": [
         {
@@ -32,8 +36,419 @@
           "name": "IMAGE_MENU_ICON",
           "file": "images/menu-icon.png",
           "menuIcon": true
+        },
+        {
+          "type": "raw",
+          "name": "LANG_DE",
+          "file": "languages/de-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_FR",
+          "file": "languages/fr-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_IT",
+          "file": "languages/it-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ES",
+          "file": "languages/es-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_PT",
+          "file": "languages/pt-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_NL",
+          "file": "languages/nl-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_SV",
+          "file": "languages/sv-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_UK",
+          "file": "languages/uk-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_JA",
+          "file": "languages/ja-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ZH",
+          "file": "languages/zh-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_KO",
+          "file": "languages/ko-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_AR",
+          "file": "languages/ar-144.bin",
+          "targetPlatforms": [
+            "basalt",
+            "diorite",
+            "flint"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_DE",
+          "file": "languages/de-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_FR",
+          "file": "languages/fr-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_IT",
+          "file": "languages/it-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ES",
+          "file": "languages/es-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_PT",
+          "file": "languages/pt-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_NL",
+          "file": "languages/nl-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_SV",
+          "file": "languages/sv-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_UK",
+          "file": "languages/uk-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_JA",
+          "file": "languages/ja-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ZH",
+          "file": "languages/zh-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_KO",
+          "file": "languages/ko-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_AR",
+          "file": "languages/ar-180.bin",
+          "targetPlatforms": [
+            "chalk"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_DE",
+          "file": "languages/de-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_FR",
+          "file": "languages/fr-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_IT",
+          "file": "languages/it-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ES",
+          "file": "languages/es-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_PT",
+          "file": "languages/pt-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_NL",
+          "file": "languages/nl-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_SV",
+          "file": "languages/sv-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_UK",
+          "file": "languages/uk-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_JA",
+          "file": "languages/ja-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ZH",
+          "file": "languages/zh-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_KO",
+          "file": "languages/ko-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_AR",
+          "file": "languages/ar-200.bin",
+          "targetPlatforms": [
+            "emery"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_DE",
+          "file": "languages/de-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_FR",
+          "file": "languages/fr-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_IT",
+          "file": "languages/it-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ES",
+          "file": "languages/es-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_PT",
+          "file": "languages/pt-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_NL",
+          "file": "languages/nl-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_SV",
+          "file": "languages/sv-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_UK",
+          "file": "languages/uk-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_JA",
+          "file": "languages/ja-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_ZH",
+          "file": "languages/zh-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_KO",
+          "file": "languages/ko-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
+        },
+        {
+          "type": "raw",
+          "name": "LANG_AR",
+          "file": "languages/ar-260.bin",
+          "targetPlatforms": [
+            "gabbro"
+          ]
         }
       ]
-    }
+    },
+    "capabilities": [
+      "configurable"
+    ]
   }
 }

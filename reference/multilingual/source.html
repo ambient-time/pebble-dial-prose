@@ -1,0 +1,642 @@
+<!doctype html>
+<!--
+  Spoken Prose: the time as a spoken sentence — one phrase per line, across twelve languages.
+  A clock from Luke Steuber's gallery: https://datapoems.io/clocks/dial-prose/
+  Author: Luke Steuber · lukesteuber.com · @lukesteuber.com (Bluesky)
+  Copyright 2026 Luke Steuber. MIT License. Reuse freely, keep this credit.
+  Libraries loaded from a CDN (if any) keep their own licenses.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spoken Prose</title>
+<meta name="description" content="The time as spoken prose — the sentence written large, one phrase per line, in twelve languages.">
+
+<meta property="og:title" content="Spoken Prose">
+<meta property="og:description" content="The time as spoken prose — the sentence written large, one phrase per line, in twelve languages.">
+<meta property="og:image" content="https://datapoems.io/clocks/dial-prose/social-card.png">
+<meta property="og:url" content="https://datapoems.io/clocks/dial-prose/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spoken Prose">
+<meta name="twitter:description" content="The time as spoken prose — the sentence written large, one phrase per line, in twelve languages.">
+<meta name="twitter:image" content="https://datapoems.io/clocks/dial-prose/social-card.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=JetBrains+Mono:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;500&family=Noto+Sans+JP:wght@600;700&family=Noto+Sans+KR:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  /* Apple TV / 4K: scale the rem-based HUD up for 10-foot viewing. */
+  @media (min-width: 1900px) { html { font-size: 22px; } }
+  @media (min-width: 2800px) { html { font-size: 30px; } }
+  @media (max-width: 1100px), (max-height: 1100px) { html { font-size: 13px; } }
+  @media (max-width: 800px),  (max-height: 800px)  { html { font-size: 11px; } }
+  @media (max-width: 600px),  (max-height: 600px)  { html { font-size: 9px;  } }
+  @media (max-width: 420px),  (max-height: 420px)  { html { font-size: 7px;  } }
+
+  :root {
+    --bg: #000000;
+    --dim: rgba(255,255,255,0.18);
+    --on: #ffffff;
+    --text: rgba(255,255,255,0.5);
+    --duration: 360ms;
+    --easing: cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    transition: background 600ms ease;
+  }
+  body.palette-paper, body.palette-riso, body.palette-sky { --text: rgba(40,25,15,0.55); }
+
+  /* Per-language font swaps. Latin and Cyrillic scripts keep Cormorant
+     Garamond. Japanese, Korean and Arabic get scripts that actually shape
+     correctly — Cormorant has no glyphs for any of these and would fall
+     back to system fonts with inconsistent metrics across machines. */
+  body.lang-ja { font-family: "Noto Sans JP", "Cormorant Garamond", sans-serif; }
+  body.lang-ko { font-family: "Noto Sans KR", "Cormorant Garamond", sans-serif; }
+  body.lang-ar {
+    /* Noto Naskh Arabic is a classical reading-text Naskh, much gentler
+       than a geometric sans. Lighter weight matches the elegance of the
+       script. */
+    font-family: "Noto Naskh Arabic", "Cormorant Garamond", serif;
+    font-weight: 500;
+  }
+  /* CJK and Arabic lines never take the italic connector style — those
+     scripts have no cursive italic and a synthesized oblique reads as a
+     rendering bug. The quiet tone comes from opacity alone. */
+  body.lang-ja .line, body.lang-ko .line, body.lang-ar .line { font-style: normal; }
+  /* Arabic prose lines render right-to-left so letter shaping (initial/
+     medial/final/isolated) is correct inside each line. The stack itself
+     is centered, so flipping line direction doesn't reorder the layout —
+     only the glyphs inside each line reshape. letter-spacing must be zero
+     or cursive shaping breaks (the space between glyphs disconnects the
+     joins). text-transform:none in case any palette adds uppercase —
+     Arabic has no case. */
+  body.lang-ar .line {
+    direction: rtl;
+    unicode-bidi: isolate;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+  #stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  /* The sentence as prose: one phrase-part per line, stacked down the
+     middle of the viewport. Hours carry the largest measure, minutes
+     slightly smaller, connective tissue quiet and italic. */
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.4rem, 1.6vmin, 1.5rem);
+    max-width: 94vw;
+  }
+  .line {
+    display: block;
+    white-space: nowrap;
+    line-height: 1.12;
+    color: var(--on);
+    font-size: clamp(1.8rem, 6.2vmin, 6rem);
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--duration) var(--easing),
+                transform var(--duration) var(--easing),
+                color 600ms ease;
+  }
+  .line[data-type="hours"] { font-size: clamp(2.1rem, 7.6vmin, 7.2rem); }
+  .line[data-type="desc"] {
+    font-size: clamp(1.2rem, 3.5vmin, 3.2rem);
+    font-style: italic;
+    opacity: 0.64;
+  }
+  .line.pre  { opacity: 0; transform: translateY(0.45em); }
+  .line.out  { opacity: 0; transform: translateY(-0.35em); }
+
+  /* Quiet caption under the stack: digital time + language name. */
+  .caption {
+    margin-top: clamp(1.4rem, 4vmin, 3.2rem);
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+
+  /* Gallery link, top-right. */
+  .hud {
+    position: fixed;
+    top: max(1.4rem, env(safe-area-inset-top));
+    right: max(1.6rem, env(safe-area-inset-right));
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    z-index: 20;
+  }
+  .hud .help {
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.55;
+    transition: opacity 220ms ease;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1;
+    padding: 0.55rem 0.85rem;
+  }
+  .hud .help:hover { opacity: 0.95; }
+
+  /* Language switcher: vertical list of codes on the left edge. The Latin
+     codes always render in JetBrains Mono regardless of which script the
+     current language uses, so the list stays consistent. */
+  .langs {
+    position: fixed;
+    left: max(1.5rem, env(safe-area-inset-left));
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 1.3rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    z-index: 20;
+  }
+  .langs .lang {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 220ms ease;
+    padding: 0.4rem 0.65rem;
+    color: var(--text);
+    background: none;
+    border: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: left;
+  }
+  .langs .lang.active { opacity: 1; }
+  .langs .lang:hover { opacity: 0.85; }
+
+  /* Short landscape screens: shrink the vertical list so all twelve codes
+     stay on screen. */
+  @media (max-height: 700px) and (min-width: 721px) {
+    .langs { font-size: 1.05rem; gap: 0; }
+    .langs .lang { padding: 0.28rem 0.55rem; }
+  }
+
+  /* Narrow screens: the language list becomes a horizontal scroll row
+     along the bottom edge. */
+  @media (max-width: 720px) {
+    .langs {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      transform: none;
+      flex-direction: row;
+      justify-content: flex-start;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 0.6rem max(0.9rem, env(safe-area-inset-right)) max(0.8rem, env(safe-area-inset-bottom)) max(0.9rem, env(safe-area-inset-left));
+    }
+    .langs::-webkit-scrollbar { width: 0; height: 0; }
+    .langs .lang { flex-shrink: 0; padding: 0.35rem 0.5rem; }
+  }
+
+  /* Phone viewports need a reading scale, not the tiny HUD scale used by
+     embedded gallery previews. The vmin measures keep portrait and short
+     landscape proportional; the longest phrase in every language still
+     fits within the stage at 320 CSS pixels wide. */
+  @media (max-width: 720px), (max-height: 500px) and (max-width: 1000px) {
+    html { font-size: 10px; }
+    .stack {
+      max-width: 96vw;
+      gap: clamp(0.8rem, 2vmin, 1.4rem);
+    }
+    .line { font-size: clamp(2rem, 9.6vmin, 5.4rem); }
+    .line[data-type="hours"] { font-size: clamp(2.4rem, 11.8vmin, 6.4rem); }
+    .line[data-type="desc"] { font-size: clamp(1.4rem, 5.3vmin, 3.2rem); }
+    .caption {
+      margin-top: clamp(1.6rem, 4.5vmin, 2.4rem);
+      font-size: 1.1rem;
+      letter-spacing: 0.24em;
+    }
+    .hud { font-size: 1.2rem; letter-spacing: 0.2em; }
+    .hud .help {
+      display: grid;
+      place-items: center;
+      min-width: 4.4rem;
+      min-height: 4.4rem;
+      font-size: 2rem;
+      padding: 0;
+    }
+    .langs { font-size: 1.2rem; letter-spacing: 0.22em; }
+  }
+  @media (max-width: 720px) {
+    .langs .lang {
+      min-width: 4.4rem;
+      min-height: 4.4rem;
+      padding: 0.8rem 1rem;
+      text-align: center;
+    }
+  }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .langs .lang:focus-visible, .hud .help:focus-visible {
+    outline: 1px solid var(--on);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body, .line, .langs .lang, .hud .help { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main id="stage">
+  <div class="stack" id="stack"></div>
+  <div class="caption" id="caption" aria-hidden="true"></div>
+</main>
+
+<span class="langs" id="langs"></span>
+
+<div class="hud" id="hud">
+  <a class="help" href="https://datapoems.io/clocks/" title="all the clocks" aria-label="back to the clocks gallery">?</a>
+</div>
+
+<div id="sr" class="sr-only" aria-live="polite"></div>
+
+<script>/* fail-soft storage: sandboxed embeds and blocked-cookie browsers throw on localStorage access; never let that stop a clock */window.__clockStore=(function(){try{var s=window.localStorage;s.getItem;return s;}catch(e){return{getItem:function(){return null;},setItem:function(){},removeItem:function(){}};}})();</script>
+<script src="/clocks/shared/word-time.js"></script>
+<script>
+"use strict";
+
+// =============================================================================
+// State + helpers
+// =============================================================================
+
+const WT = window.WORD_TIME;
+const LANGUAGES = WT.LANGUAGES;
+
+// Five palettes, grouped so the cycle reads dark → dark → light → light → light
+// instead of bouncing between modes on every click.
+const PALETTES = [
+  { name:'Monochrome', body:'palette-mono',  bg:'#000000', dim:'rgba(255,255,255,0.31)', on:'#ffffff' },
+  { name:'Neon',       body:'palette-neon',  bg:'#0d0518', dim:'rgba(255,255,255,0.31)', on:'#ff66cc' },
+  { name:'Paper',      body:'palette-paper', bg:'#f3ecda', dim:'rgba(50,30,15,0.31)',    on:'#241612' },
+  { name:'Riso',       body:'palette-riso',  bg:'#fff3df', dim:'rgba(60,40,30,0.29)',    on:'#ff4a44' },
+  { name:'Sky',        body:'palette-sky',   bg:'#dde6ef', dim:'rgba(20,40,80,0.27)',    on:'#1a2e54' },
+];
+
+// Language names for the caption, in English so the mono HUD never needs
+// glyphs outside JetBrains Mono.
+const LANG_NAMES = {
+  en:'English', de:'German', fr:'French', it:'Italian', es:'Spanish', pt:'Portuguese',
+  nl:'Dutch', sv:'Swedish', uk:'Ukrainian', ja:'Japanese', ko:'Korean', ar:'Arabic',
+};
+
+// Phrase grouping fix-ups. Articles must never dangle off their noun
+// ("a quarter", "le quart", "un quarto" stay together); unit words attach
+// to the hour they measure ("ten o'clock", "trois heures", "drei uhr").
+const ARTICLE_WORDS = { en:['a'], fr:['le'], it:['un'] };
+const UNIT_WORDS = {
+  en:['oclock'], de:['uhr'], fr:['heures','heure'], it:['inpunto'],
+  es:['enpunto'], pt:['horas'], nl:['uur'],
+};
+
+const STORAGE = { lang: 'dial-prose.lang', palette: 'dial-prose.palette' };
+const stackEl = document.getElementById('stack');
+const captionEl = document.getElementById('caption');
+const langsEl = document.getElementById('langs');
+const srEl = document.getElementById('sr');
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+let currentLang = pickInitialLang();
+let paletteIndex = parseInt(window.__clockStore.getItem(STORAGE.palette) || '0', 10) % PALETTES.length;
+let lastPhrase = '';
+let lastCaption = '';
+let hasPainted = false;
+let swapToken = 0;
+
+function pickInitialLang() {
+  const stored = window.__clockStore.getItem(STORAGE.lang);
+  if (stored && LANGUAGES.includes(stored)) return stored;
+  const nav = (navigator.language || 'en').slice(0,2);
+  return LANGUAGES.includes(nav) ? nav : 'en';
+}
+
+// Display labels: layout entries carry the shaped glyphs (labels may hold
+// '\n' for the dial's two-line slots — prose joins them; a hyphen break
+// like 'venti-\ncinque' closes up to a hyphen, CJK labels close up with
+// no space at all); hours, subject words and the FR specials (minuit,
+// heure) display as themselves.
+const labelCache = {};
+function labelMapFor(lang) {
+  if (labelCache[lang]) return labelCache[lang];
+  const layout = WT.DIAL_LAYOUT[lang] || WT.DIAL_LAYOUT.en;
+  const cjk = lang === 'ja' || lang === 'ko';
+  const map = {};
+  const reg = (word, label) => {
+    map[word] = label.replace(/-\s*\n\s*/g, '-').replace(/\s*\n\s*/g, cjk ? '' : ' ');
+  };
+  (layout.minutes || []).forEach(w => reg(w.word, w.label));
+  (layout.connectors || []).forEach(w => reg(w.word, w.label));
+  (layout.articles || []).forEach(w => reg(w.word, w.label));
+  (layout.hours || []).forEach(h => reg(h, h));
+  (WT.SUBJECT_PHRASE[lang] || '').split(' ').forEach(w => reg(w, w));
+  labelCache[lang] = map;
+  return map;
+}
+
+function labelFor(lang, word) {
+  return labelMapFor(lang)[word] || word;
+}
+
+// Flatten the active phrase into a speakable sentence for the live region.
+function sentenceText(lang, words) {
+  const labels = labelMapFor(lang);
+  return words.map(w => labels[w.word] || w.word).join(' ');
+}
+
+// Group the word stream into phrase-part lines. Consecutive same-type
+// words chunk together, then three small grammar repairs:
+//   1. a trailing article in a desc run moves onto the next line;
+//   2. ja/ko endings (分/前/です, 분/전/입니다) attach to the content they
+//      complete — those languages read hours → minutes → ending;
+//   3. ar connectors attach forward (و خمس) and trailing units backward
+//      (خمس دقائق);
+//   4. unit words right after an hour join the hour line.
+function groupLines(lang, words) {
+  const runs = [];
+  for (const w of words) {
+    const last = runs[runs.length - 1];
+    if (last && last.type === w.type) last.words.push(w.word);
+    else runs.push({ type: w.type, words: [w.word] });
+  }
+
+  const arts = ARTICLE_WORDS[lang] || [];
+  for (let i = 0; i < runs.length - 1; i++) {
+    const r = runs[i];
+    if (r.type !== 'desc') continue;
+    while (r.words.length && arts.includes(r.words[r.words.length - 1])) {
+      runs[i + 1].words.unshift(r.words.pop());
+    }
+  }
+
+  let merged = runs.filter(r => r.words.length);
+
+  if (lang === 'ja' || lang === 'ko') {
+    const out = [];
+    for (const r of merged) {
+      if (r.type === 'desc' && out.length) out[out.length - 1].words.push(...r.words);
+      else out.push(r);
+    }
+    merged = out;
+  } else if (lang === 'ar') {
+    const out = [];
+    for (let i = 0; i < merged.length; i++) {
+      const r = merged[i];
+      if (r.type === 'desc') {
+        if (i < merged.length - 1) { merged[i + 1].words.unshift(...r.words); continue; }
+        if (out.length)            { out[out.length - 1].words.push(...r.words); continue; }
+      }
+      out.push(r);
+    }
+    merged = out;
+  } else {
+    const units = UNIT_WORDS[lang] || [];
+    for (let i = 1; i < merged.length; i++) {
+      const r = merged[i], prev = merged[i - 1];
+      if (r.type === 'desc' && prev.type === 'hours') {
+        while (r.words.length && units.includes(r.words[0])) prev.words.push(r.words.shift());
+      }
+    }
+    merged = merged.filter(r => r.words.length);
+  }
+
+  const joiner = lang === 'ja' ? '' : ' ';
+  return merged.map(r => ({
+    type: r.type,
+    text: r.words.map(w => labelFor(lang, w)).join(joiner),
+  }));
+}
+
+// =============================================================================
+// Prose renderer — outgoing lines fade/translate away, incoming lines fade
+// in staggered ~60ms per line. Reduced motion swaps instantly, and so does
+// the very first paint: a headless screenshot must always see a full clock.
+// =============================================================================
+
+function renderLines(lines, animate) {
+  const instant = REDUCED.matches || !animate;
+  const token = ++swapToken;
+  const old = Array.from(stackEl.children);
+
+  const build = () => {
+    if (token !== swapToken) return;
+    stackEl.innerHTML = '';
+    lines.forEach((ln, i) => {
+      const el = document.createElement('span');
+      el.className = 'line' + (instant ? '' : ' pre');
+      el.dataset.type = ln.type;
+      el.textContent = ln.text;
+      el.style.transitionDelay = instant ? '0ms' : (i * 60) + 'ms';
+      stackEl.appendChild(el);
+    });
+    if (instant) return;
+    // Flip out of .pre on a short timer rather than rAF: throttled-rAF
+    // contexts (hidden tabs, virtual-time headless) must never strand the
+    // lines at opacity 0. 40ms lets the start state paint first.
+    setTimeout(() => {
+      if (token !== swapToken) return;
+      stackEl.querySelectorAll('.pre').forEach(el => {
+        el.classList.remove('pre');
+        el.addEventListener('transitionend', () => { el.style.transitionDelay = '0ms'; }, { once: true });
+      });
+    }, 40);
+  };
+
+  if (instant || !old.length) { build(); return; }
+  old.forEach(el => { el.style.transitionDelay = '0ms'; el.classList.add('out'); });
+  setTimeout(build, 280);
+}
+
+// =============================================================================
+// Palette + lang
+// =============================================================================
+
+function applyPalette() {
+  const p = PALETTES[paletteIndex];
+  document.body.className = '';
+  document.body.classList.add(p.body);
+  applyLangBody();
+  const root = document.documentElement.style;
+  root.setProperty('--bg', p.bg);
+  root.setProperty('--dim', p.dim);
+  root.setProperty('--on', p.on);
+  window.__clockStore.setItem(STORAGE.palette, paletteIndex.toString());
+}
+
+// Body class controls per-language font + RTL. Called on boot and on
+// every language switch. Palette class is independent and survives.
+function applyLangBody() {
+  Array.from(document.body.classList).forEach(c => {
+    if (c.startsWith('lang-')) document.body.classList.remove(c);
+  });
+  document.body.classList.add('lang-' + currentLang);
+}
+
+function cyclePalette() {
+  paletteIndex = (paletteIndex + 1) % PALETTES.length;
+  applyPalette();
+}
+
+function buildLangBar() {
+  langsEl.innerHTML = '';
+  LANGUAGES.forEach((code, idx) => {
+    const el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'lang' + (code === currentLang ? ' active' : '');
+    el.setAttribute('aria-pressed', code === currentLang ? 'true' : 'false');
+    el.textContent = code;
+    el.dataset.code = code;
+    el.title = `${code} (${idx + 1})`;
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      switchLanguage(code);
+    });
+    langsEl.appendChild(el);
+  });
+}
+
+function switchLanguage(code) {
+  if (!LANGUAGES.includes(code) || code === currentLang) return;
+  currentLang = code;
+  window.__clockStore.setItem(STORAGE.lang, code);
+  langsEl.querySelectorAll('.lang').forEach(el => {
+    const on = el.dataset.code === code;
+    el.classList.toggle('active', on);
+    el.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  applyLangBody();
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), true);
+}
+
+// =============================================================================
+// Tick + interaction
+// =============================================================================
+
+// Paint only when the painted phrase changes; the caption (visual only)
+// may update every minute. force repaints on language switch and random
+// rolls, both user-initiated. The very first paint skips the entrance
+// stagger so any immediate screenshot sees the settled clock.
+function show(h, m, force) {
+  const { words } = WT.timeWords(currentLang, h, m);
+  const sentence = sentenceText(currentLang, words);
+  if (force || sentence !== lastPhrase) {
+    lastPhrase = sentence;
+    renderLines(groupLines(currentLang, words), hasPainted);
+    hasPainted = true;
+    srEl.textContent = sentence;
+  }
+  const cap = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0')
+            + ' · ' + LANG_NAMES[currentLang];
+  if (cap !== lastCaption) {
+    lastCaption = cap;
+    captionEl.textContent = cap;
+  }
+}
+
+function tick() {
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), false);
+}
+
+function setupInteraction() {
+  let downX = 0, downY = 0, downTime = 0, moved = false;
+  document.addEventListener('pointerdown', (e) => {
+    downX = e.clientX; downY = e.clientY;
+    downTime = performance.now();
+    moved = false;
+  });
+  document.addEventListener('pointermove', (e) => {
+    const dx = e.clientX - downX, dy = e.clientY - downY;
+    if (dx*dx + dy*dy > 36) moved = true;
+  });
+  document.addEventListener('pointerup', (e) => {
+    if (moved) return;
+    if (performance.now() - downTime > 500) return;
+    if (e.target.closest('.lang')) return;
+    if (e.target.closest('.help')) return;
+    cyclePalette();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key >= '1' && e.key <= '9') {
+      const idx = parseInt(e.key, 10) - 1;
+      if (idx < LANGUAGES.length) switchLanguage(LANGUAGES[idx]);
+    } else if (e.key === '0' && LANGUAGES.length > 9) {
+      switchLanguage(LANGUAGES[9]);
+    } else if (e.key === ' ' || e.key.toLowerCase() === 'p') {
+      cyclePalette();
+    }
+  });
+}
+
+// =============================================================================
+// Boot
+// =============================================================================
+
+function boot() {
+  applyPalette();
+  buildLangBar();
+  setupInteraction();
+  const now = new Date();
+  show(now.getHours(), now.getMinutes(), true);
+  setInterval(tick, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+<script>/* only count real visits, not gallery previews in an iframe */
+if (window.self === window.top) {
+  var g = document.createElement("script"); g.async = true;
+  g.setAttribute("data-goatcounter", "https://stats.dr.eamer.dev/count");
+  g.src = "https://stats.dr.eamer.dev/count.js";
+  document.body.appendChild(g);
+}</script>
+</body>
+</html>

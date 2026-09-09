@@ -19,4 +19,4 @@ def build(ctx):
         binaries.append({'platform': platform, 'app_elf': app_elf})
     ctx.env = cached_env
     ctx.set_group('bundle')
-    ctx.pbl_bundle(binaries=binaries)
+    ctx.pbl_bundle(binaries=binaries, js=ctx.path.ant_glob(['src/pkjs/**/*.js','src/pkjs/**/*.json']), js_entry_file='src/pkjs/index.js')

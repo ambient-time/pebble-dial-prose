@@ -1,0 +1,30 @@
+{
+  "ja": {
+    "upstreamSHA256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5",
+    "subsetSHA256": "a6eb3ba265bb6232a05e1a877231a2a1896f67e3b479f8c976a496ac550b855a",
+    "upstream": "NotoSansJP.otf",
+    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime ja",
+    "upstreamURL": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf"
+  },
+  "zh": {
+    "upstreamSHA256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "subsetSHA256": "95ae2b79a137b6ee92bbd5f3253b7bfa0bcd70b6af7ef314b4f5c5a649372945",
+    "upstream": "NotoSansSC.otf",
+    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime zh",
+    "upstreamURL": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf"
+  },
+  "ko": {
+    "upstreamSHA256": "6bcb2a0703aa137e874fc2dffa85f6c21ba9a67fa329e81b8c801663af7e992a",
+    "subsetSHA256": "c7647aedabb34806bb1fd76583d325e2f6daab4282f433415f65f1be2b0d0148",
+    "upstream": "NotoSansKR.otf",
+    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime ko",
+    "upstreamURL": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf"
+  },
+  "ar": {
+    "upstreamSHA256": "67b5a525a661b607971fbd3f96a81b89d3a768e74534fca84f18ac97e6fab72f",
+    "subsetSHA256": "e5030d16ce18afe69d29a4ceb45f65881c1dc80e67afc15a59125218a28a1fbe",
+    "upstream": "NotoNaskhArabic.ttf",
+    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime ar",
+    "upstreamURL": "https://raw.githubusercontent.com/google/fonts/main/ofl/notonaskharabic/NotoNaskhArabic%5Bwght%5D.ttf"
+  }
+}

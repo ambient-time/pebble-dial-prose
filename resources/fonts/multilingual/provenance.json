@@ -8,16 +8,16 @@
   },
   "zh": {
     "upstreamSHA256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
-    "subsetSHA256": "95ae2b79a137b6ee92bbd5f3253b7bfa0bcd70b6af7ef314b4f5c5a649372945",
+    "subsetSHA256": "9fb61a3c9b59dad318fd0ba311e01b409057cce883a937bf486897f3906a4364",
     "upstream": "NotoSansSC.otf",
-    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime zh",
+    "subset": "Existing glyphs plus complete hour-minute wording; renamed AmbientTime zh",
     "upstreamURL": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf"
   },
   "ko": {
     "upstreamSHA256": "6bcb2a0703aa137e874fc2dffa85f6c21ba9a67fa329e81b8c801663af7e992a",
-    "subsetSHA256": "c7647aedabb34806bb1fd76583d325e2f6daab4282f433415f65f1be2b0d0148",
+    "subsetSHA256": "0b7724f95b8977c53ecdc32231b848e122344e3bdb88d8b924468614a0e2751b",
     "upstream": "NotoSansKR.otf",
-    "subset": "Required source glyphs and Arabic presentation forms; renamed AmbientTime ko",
+    "subset": "Existing glyphs plus complete hour-minute wording; renamed AmbientTime ko",
     "upstreamURL": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf"
   },
   "ar": {

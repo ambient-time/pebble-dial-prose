@@ -24,7 +24,7 @@ const HOURS = {
   uk: ['перша','друга','третя','четверта','пʼята','шоста','сьома','восьма','девʼята','десята','одинадцята','дванадцята'],
   ja: ['一時','二時','三時','四時','五時','六時','七時','八時','九時','十時','十一時','十二時'],
   zh: ['一点','两点','三点','四点','五点','六点','七点','八点','九点','十点','十一点','十二点'],
-  ko: ['한시','두시','세시','네시','다섯시','여섯시','일곱시','여덟시','아홉시','열시','열한시','열두시'],
+  ko: ['한 시','두 시','세 시','네 시','다섯 시','여섯 시','일곱 시','여덟 시','아홉 시','열 시','열한 시','열두 시'],
   ar: ['الواحدة','الثانية','الثالثة','الرابعة','الخامسة','السادسة','السابعة','الثامنة','التاسعة','العاشرة','الحادية عشرة','الثانية عشرة'],
 };
 
@@ -38,7 +38,7 @@ const SUBJECT_PHRASE = {
   nl: 'het is',
   sv: 'klockan är',
   uk: 'зараз',
-  ja: '今は',
+  ja: '今',
   zh: '现在',
   ko: '지금',
   ar: 'الساعة',
@@ -197,51 +197,54 @@ const DIAL_LAYOUT = {
   },
   ja: {
     minutes: [
-      { word:'go',    label:'五',    type:'minutes' },
-      { word:'ju',    label:'十',    type:'minutes' },
-      { word:'juugo', label:'十五',  type:'minutes' },
-      { word:'nijuu', label:'二十',  type:'minutes' },
-      { word:'nijuugo', label:'二十\n五', type:'minutes' },
+      { word:'go', label:'五分', type:'minutes' },
+      { word:'ju', label:'十分', type:'minutes' },
+      { word:'juugo', label:'十五分', type:'minutes' },
+      { word:'nijuu', label:'二十分', type:'minutes' },
+      { word:'nijuugo', label:'二十五分', type:'minutes' },
+      { word:'sanjuu', label:'三十分', type:'minutes' },
+      { word:'sanjuugo', label:'三十五分', type:'minutes' },
+      { word:'yonjuu', label:'四十分', type:'minutes' },
+      { word:'yonjuugo', label:'四十五分', type:'minutes' },
+      { word:'gojuu', label:'五十分', type:'minutes' },
+      { word:'gojuugo', label:'五十五分', type:'minutes' },
     ],
-    connectors: [
-      { word:'fun',  label:'分',  type:'desc' },
-      { word:'han',  label:'半',  type:'minutes' },
-      { word:'mae',  label:'前',  type:'desc' },
-      { word:'desu', label:'です', type:'desc' },
-    ],
+    connectors: [],
     hours: ['一時','二時','三時','四時','五時','六時','七時','八時','九時','十時','十一時','十二時'],
   },
   zh: {
     minutes: [
-      { word:'wu',     label:'五',     type:'minutes' },
-      { word:'shi',    label:'十',     type:'minutes' },
-      { word:'shiwu',  label:'十五',   type:'minutes' },
-      { word:'ershi',  label:'二十',   type:'minutes' },
-      { word:'ershiwu',label:'二十\n五', type:'minutes' },
+      { word:'wu', label:'零五分', type:'minutes' },
+      { word:'shi', label:'十分', type:'minutes' },
+      { word:'shiwu', label:'十五分', type:'minutes' },
+      { word:'ershi', label:'二十分', type:'minutes' },
+      { word:'ershiwu', label:'二十五分', type:'minutes' },
+      { word:'sanshi', label:'三十分', type:'minutes' },
+      { word:'sanshiwu', label:'三十五分', type:'minutes' },
+      { word:'sishi', label:'四十分', type:'minutes' },
+      { word:'sishiwu', label:'四十五分', type:'minutes' },
+      { word:'wushi', label:'五十分', type:'minutes' },
+      { word:'wushiwu', label:'五十五分', type:'minutes' },
     ],
-    connectors: [
-      { word:'fen',   label:'分',   type:'desc' },
-      { word:'ban',   label:'半',   type:'minutes' },
-      { word:'cha',   label:'差',   type:'desc' },
-      { word:'xianzai', label:'现在', type:'desc' },
-    ],
+    connectors: [],
     hours: ['一点','两点','三点','四点','五点','六点','七点','八点','九点','十点','十一点','十二点'],
   },
   ko: {
     minutes: [
-      { word:'o',       label:'오',     type:'minutes' },
-      { word:'sip',     label:'십',     type:'minutes' },
-      { word:'sipo',    label:'십오',   type:'minutes' },
-      { word:'isip',    label:'이십',   type:'minutes' },
-      { word:'isipo',   label:'이십\n오', type:'minutes' },
+      { word:'o', label:'오 분', type:'minutes' },
+      { word:'sip', label:'십 분', type:'minutes' },
+      { word:'sipo', label:'십오 분', type:'minutes' },
+      { word:'isip', label:'이십 분', type:'minutes' },
+      { word:'isipo', label:'이십오 분', type:'minutes' },
+      { word:'samsip', label:'삼십 분', type:'minutes' },
+      { word:'samsipo', label:'삼십오 분', type:'minutes' },
+      { word:'sasip', label:'사십 분', type:'minutes' },
+      { word:'sasipo', label:'사십오 분', type:'minutes' },
+      { word:'osip', label:'오십 분', type:'minutes' },
+      { word:'osipo', label:'오십오 분', type:'minutes' },
     ],
-    connectors: [
-      { word:'bun',   label:'분',     type:'desc' },
-      { word:'ban',   label:'반',     type:'minutes' },
-      { word:'jeon',  label:'전',     type:'desc' },
-      { word:'imnida',label:'입니다', type:'desc' },
-    ],
-    hours: ['한시','두시','세시','네시','다섯시','여섯시','일곱시','여덟시','아홉시','열시','열한시','열두시'],
+    connectors: [],
+    hours: ['한 시','두 시','세 시','네 시','다섯 시','여섯 시','일곱 시','여덟 시','아홉 시','열 시','열한 시','열두 시'],
   },
   ar: {
     // Arabic minute words read right-to-left in their labels (CSS sets
@@ -428,50 +431,17 @@ function timeWords(lang, hours, minutes) {
     else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('desiat', 'minutes'); }
     else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('bez', 'desc'); add('piat', 'minutes'); }
   } else if (lang === 'ja') {
-    // Japanese — hour-minute order, です at end. After half, the time is
-    // read as "(next hour) - (60-min) 前" — N minutes before next hour.
-    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('desu', 'desc'); }
-    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('go', 'minutes');    add('fun', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('ju', 'minutes');    add('fun', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('juugo', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('nijuu', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('nijuugo', 'minutes'); add('fun', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('han', 'minutes'); add('desu', 'desc'); }
-    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('nijuugo', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('nijuu', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('juugo', 'minutes'); add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('ju', 'minutes');    add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
-    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('go', 'minutes');    add('fun', 'desc'); add('mae', 'desc'); add('desu', 'desc'); }
+    // Compact hour-minute notation; keep each number with its unit.
+    add(wordAtH(0), 'hours');
+    if (m5) add(DIAL_LAYOUT.ja.minutes[m5 / 5 - 1].word, 'minutes');
   } else if (lang === 'zh') {
-    // Mandarin — 现在 + hour + minutes. After half: 差 + N分 + next hour.
-    add('xianzai', 'desc');
-    if (m5 === 0)        { add(wordAtH(0), 'hours'); }
-    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('wu', 'minutes');     add('fen', 'desc'); }
-    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('shi', 'minutes');    add('fen', 'desc'); }
-    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('shiwu', 'minutes');  add('fen', 'desc'); }
-    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('ershi', 'minutes');  add('fen', 'desc'); }
-    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('ershiwu', 'minutes'); add('fen', 'desc'); }
-    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('ban', 'minutes'); }
-    else if (m5 === 35)  { add('cha', 'desc'); add('ershiwu', 'minutes'); add('fen', 'desc'); add(wordAtH(1), 'hours'); }
-    else if (m5 === 40)  { add('cha', 'desc'); add('ershi', 'minutes');  add('fen', 'desc'); add(wordAtH(1), 'hours'); }
-    else if (m5 === 45)  { add('cha', 'desc'); add('shiwu', 'minutes');  add('fen', 'desc'); add(wordAtH(1), 'hours'); }
-    else if (m5 === 50)  { add('cha', 'desc'); add('shi', 'minutes');    add('fen', 'desc'); add(wordAtH(1), 'hours'); }
-    else if (m5 === 55)  { add('cha', 'desc'); add('wu', 'minutes');     add('fen', 'desc'); add(wordAtH(1), 'hours'); }
+    // Compact hour-minute notation; keep each number with its unit.
+    add(wordAtH(0), 'hours');
+    if (m5) add(DIAL_LAYOUT.zh.minutes[m5 / 5 - 1].word, 'minutes');
   } else if (lang === 'ko') {
-    // Korean — native-Korean hours + Sino-Korean minutes. 입니다 ends polite.
-    // After half, "(next hour) (60-min) 분 전 입니다" — N minutes before next hour.
-    if (m5 === 0)        { add(wordAtH(0), 'hours'); add('imnida', 'desc'); }
-    else if (m5 === 5)   { add(wordAtH(0), 'hours'); add('o', 'minutes');     add('bun', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 10)  { add(wordAtH(0), 'hours'); add('sip', 'minutes');   add('bun', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 15)  { add(wordAtH(0), 'hours'); add('sipo', 'minutes');  add('bun', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 20)  { add(wordAtH(0), 'hours'); add('isip', 'minutes');  add('bun', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 25)  { add(wordAtH(0), 'hours'); add('isipo', 'minutes'); add('bun', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 30)  { add(wordAtH(0), 'hours'); add('ban', 'minutes'); add('imnida', 'desc'); }
-    else if (m5 === 35)  { add(wordAtH(1), 'hours'); add('isipo', 'minutes'); add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 40)  { add(wordAtH(1), 'hours'); add('isip', 'minutes');  add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 45)  { add(wordAtH(1), 'hours'); add('sipo', 'minutes');  add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 50)  { add(wordAtH(1), 'hours'); add('sip', 'minutes');   add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
-    else if (m5 === 55)  { add(wordAtH(1), 'hours'); add('o', 'minutes');     add('bun', 'desc'); add('jeon', 'desc'); add('imnida', 'desc'); }
+    // Compact hour-minute notation; keep each number with its unit.
+    add(wordAtH(0), 'hours');
+    if (m5) add(DIAL_LAYOUT.ko.minutes[m5 / 5 - 1].word, 'minutes');
   } else if (lang === 'ar') {
     // Arabic — ordinal feminine hours, و/إلا as past/to connectors. Uses
     // العشرون (twenty) as the 20-minute word; some dialects say الثلث (third)

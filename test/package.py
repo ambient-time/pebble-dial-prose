@@ -17,7 +17,7 @@ from libpebble2.util.stm32_crc import crc32
 ROOT = Path(__file__).resolve().parent.parent
 UUID = 'b824aad2-f29d-4081-a6f6-60a19f00262d'
 SIZES = {'basalt': (144, 168), 'diorite': (144, 168), 'emery': (200, 228),
-         'flint': (144, 168), 'chalk': (180, 180), 'gabbro': (260, 260)}
+         'flint': (144, 168)}
 ROOT_FILES = ('package.json', 'package-lock.json', 'wscript', 'Makefile', 'README.md', 'LICENSE', '.gitignore', '.gitattributes')
 SOURCE_DIRS = ('src', 'resources', 'reference', 'test', 'tools')
 REQUIRED_FRAMES = {'hero', 'idle', 'quarter', 'twentyfive', 'eleven-till', 'seven-quarter', 'eight-oclock', 'eight-till', 'noon', 'midnight', 'before-five', 'five-rollover', 'before-noon', 'noon-rollover', 'before-midnight', 'midnight-rollover'}
@@ -53,7 +53,7 @@ def validate_build(root):
     require(source['author'] == pebble['companyName'] == 'Luke Steuber', 'Incorrect authorship')
     require(pebble['uuid'] == UUID, 'Dial Prose UUID must be preserved')
     targets = pebble['targetPlatforms']
-    require(len(targets) == len(SIZES) and set(targets) == set(SIZES), 'Expected exactly six target platforms')
+    require(len(targets) == len(SIZES) and set(targets) == set(SIZES), 'Expected exactly four rectangular target platforms')
     require(pebble.get('capabilities') == ['configurable'] and pebble.get('messageKeys') == {'LANGUAGE': 0, 'THEME': 90, 'REQUEST_STATE': 91}, 'Expected language settings channel')
     # The SDK names its bundle after the checkout directory, including imported ZIPs.
     pbw = root / 'build' / f'{root.name}.pbw'
@@ -169,14 +169,14 @@ def stage(root, evidence, source, pbw, digest, reports):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--evidence', type=Path,
-                        help='Validate six native capture reports and stage the local PBW/source review kit')
+                        help='Validate four native capture reports and stage the local PBW/source review kit')
     args = parser.parse_args()
     source, pbw, digest = validate_build(ROOT)
     if args.evidence:
         reports = validate_evidence(args.evidence, digest)
         print(json.dumps(stage(ROOT, args.evidence, source, pbw, digest, reports), indent=2))
     else:
-        print(f'Dial Prose {source["version"]}: six native targets, menu icon, offline watchface; SHA-256 {digest}')
+        print(f'Dial Prose {source["version"]}: four rectangular native targets, menu icon, offline watchface; SHA-256 {digest}')
 
 
 if __name__ == '__main__':

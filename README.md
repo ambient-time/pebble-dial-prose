@@ -4,7 +4,7 @@ The time, written as a sentence. Cormorant Garamond gives the hour a generous se
 
 The English setting uses familiar five-minute phrases: “ten past six,” “a quarter till three,” and “twelve o’clock.” The words round down to the current five-minute interval. The face updates once a minute and works offline.
 
-Prose supports Basalt, Chalk, Diorite, Emery, Flint and Gabbro. Each display shape has its own spacing and type sizes. Monochrome watches use solid white lettering; color watches have softer gray connecting words. Choose among 13 languages in the Pebble phone app’s face settings: English, German, French, Italian, Spanish, Portuguese, Dutch, Swedish, Ukrainian, Japanese, Chinese, Korean and Arabic. The watch remembers your selection offline.
+Prose supports rectangular Pebble watches: Basalt, Diorite, Emery and Flint. Each display size has its own spacing and type sizes. Monochrome watches use solid white lettering; color watches have softer gray connecting words. Choose among 13 languages in the Pebble phone app’s face settings: English, German, French, Italian, Spanish, Portuguese, Dutch, Swedish, Ukrainian, Japanese, Chinese, Korean and Arabic. The watch remembers your selection offline.
 
 ## Build
 
@@ -21,11 +21,12 @@ python3 -m pip install -r test/requirements.txt
 make test
 make assets
 python test/package.py
-python test/emulator-language.py gabbro --fresh
-python3 tools/release.py
+python test/emulator-language.py basalt --fresh
+python test/package.py --evidence build/evidence
+python test/independent.py
 ```
 
-Run the emulator check for each declared target before staging a release. `tools/release.py` freezes the reviewed package, builds its source archive outside the checkout, and compares native code, resources and phone JavaScript. The source check compares all 1,440 daily phrases with the supplied English grammar. Rendering checks cover every minute on each display layout, including round-screen edges. Emulator reports identify the exact build they tested. Physical-watch daylight readability and battery measurements remain open.
+Run the emulator check for each declared target before staging a release. `test/package.py --evidence build/evidence` freezes the reviewed package and source archive. `test/independent.py` builds that archive outside the checkout and compares native code, resources and phone JavaScript. The source check compares all 1,440 daily phrases with the supplied English grammar. Rendering checks cover every minute on each display layout, at each supported rectangular size. Emulator reports identify the exact build they tested. Physical-watch daylight readability and battery measurements remain open.
 
 ## Source and fonts
 

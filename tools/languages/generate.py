@@ -69,6 +69,8 @@ def inside(w,h,x,y,pad=1):
 def fits(w,h,x,y,im,pad=1):return all(inside(w,h,xx,yy,pad) for xx in [x,x+im.width-1] for yy in [y,y+im.height-1])
 
 sizes=[(144,168,['basalt','diorite','flint']),(180,180,['chalk']),(200,228,['emery']),(260,260,['gabbro'])] if PROSE else [(180,180,['chalk']),(260,260,['gabbro'])]
+declared=set(json.loads((ROOT/'package.json').read_text())['pebble']['targetPlatforms'])
+sizes=[(w,h,[t for t in targets if t in declared]) for w,h,targets in sizes if declared.intersection(targets)]
 resources=[];proof=[]
 for w,h,targets in sizes:
  for lang in LANGS[1:]:

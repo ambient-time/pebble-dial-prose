@@ -1,7 +1,7 @@
 {
   "name": "dial-prose",
   "author": "Luke Steuber",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "keywords": [
     "pebble-app"
@@ -17,11 +17,9 @@
     "enableMultiJS": true,
     "targetPlatforms": [
       "basalt",
-      "chalk",
       "diorite",
       "emery",
-      "flint",
-      "gabbro"
+      "flint"
     ],
     "watchapp": {
       "watchface": true
@@ -162,102 +160,6 @@
         {
           "type": "raw",
           "name": "LANG_DE",
-          "file": "languages/de-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_FR",
-          "file": "languages/fr-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_IT",
-          "file": "languages/it-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_ES",
-          "file": "languages/es-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_PT",
-          "file": "languages/pt-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_NL",
-          "file": "languages/nl-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_SV",
-          "file": "languages/sv-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_UK",
-          "file": "languages/uk-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_JA",
-          "file": "languages/ja-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_ZH",
-          "file": "languages/zh-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_KO",
-          "file": "languages/ko-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_AR",
-          "file": "languages/ar-180.bin",
-          "targetPlatforms": [
-            "chalk"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_DE",
           "file": "languages/de-200.bin",
           "targetPlatforms": [
             "emery"
@@ -349,102 +251,6 @@
           "file": "languages/ar-200.bin",
           "targetPlatforms": [
             "emery"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_DE",
-          "file": "languages/de-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_FR",
-          "file": "languages/fr-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_IT",
-          "file": "languages/it-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_ES",
-          "file": "languages/es-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_PT",
-          "file": "languages/pt-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_NL",
-          "file": "languages/nl-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_SV",
-          "file": "languages/sv-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_UK",
-          "file": "languages/uk-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_JA",
-          "file": "languages/ja-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_ZH",
-          "file": "languages/zh-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_KO",
-          "file": "languages/ko-260.bin",
-          "targetPlatforms": [
-            "gabbro"
-          ]
-        },
-        {
-          "type": "raw",
-          "name": "LANG_AR",
-          "file": "languages/ar-260.bin",
-          "targetPlatforms": [
-            "gabbro"
           ]
         }
       ]

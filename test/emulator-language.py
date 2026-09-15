@@ -143,7 +143,10 @@ def run(platform,fresh=False):
             else:
                 candidate=max(source['phrases'][code],key=lambda p:sum(len(w['word']) for w in p['words']))
                 longest=(candidate['hour'],candidate['minute'],1)
-            for pose,clock in [('hero',(10,8,1)),('longest',longest)]:
+            poses = [('hero',(10,8,1)),('longest',longest)]
+            if code in ('ja','zh','ko'):
+                poses += [('review-0205',(2,5,1)),('review-0920',(9,20,1)),('review-0930',(9,30,1)),('review-0750',(7,50,1)),('review-1155',(11,55,1)),('review-1200',(12,0,1))]
+            for pose,clock in poses:
                 name='lang-'+code+'-'+pose;grab(name,clock);language_frames.append(name)
                 assert any(f'Language boot={language}' in l for l in logs[-12:]),'Language did not survive app restart'
         before=len(logs)

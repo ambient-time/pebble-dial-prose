@@ -447,7 +447,7 @@ function groupLines(lang, words) {
     merged = merged.filter(r => r.words.length);
   }
 
-  const joiner = lang === 'ja' ? '' : ' ';
+  const joiner = lang === 'ja' || lang === 'zh' ? '' : ' ';
   return merged.map(r => ({
     type: r.type,
     text: r.words.map(w => labelFor(lang, w)).join(joiner),

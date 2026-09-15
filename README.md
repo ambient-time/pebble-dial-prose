@@ -11,6 +11,7 @@ Prose supports rectangular Pebble watches: Basalt, Diorite, Emery and Flint. Eac
 Use Pebble SDK 4.33.1 and its command-line tool. The source archive includes the fonts and generated lettering required to build the face.
 
 ```sh
+npm ci --ignore-scripts
 pebble build --sdk 4.33.1
 ```
 
@@ -34,4 +35,6 @@ Luke Steuber created Prose and its original [Spoken Prose clock](https://datapoe
 
 CJK and Arabic lettering uses bundled Noto font subsets, with OFL licenses and source fingerprints in `resources/fonts/multilingual/`. See `tools/languages/README.md` for reproducible language resources and settings checks.
 
-Code is copyright 2026 Luke Steuber, under the MIT License. [Cormorant Garamond](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond) is by Christian Thalmann and the Cormorant Project Authors. The font uses the SIL Open Font License; its license and source fingerprints accompany the font files in `resources/fonts/`.
+Luke Steuber’s original code is copyright 2026 Luke Steuber, under the MIT License. [Cormorant Garamond](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond) is by Christian Thalmann and the Cormorant Project Authors. The font uses the SIL Open Font License; its license and source fingerprints accompany the font files in `resources/fonts/`.
+
+The bundled tinf decoder is copyright Joergen Ibsen and uses the zlib license. Its notice and local modifications are recorded in [tinf-LICENSE](src/c/tinf-LICENSE) and [tinf-provenance.json](src/c/tinf-provenance.json). Phone settings use `@rebble/clay`, which retains its own MIT notice.
